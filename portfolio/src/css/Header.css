@@ -47,6 +47,22 @@
   color: #c26b1b;
 }
 
+.site-header__nav a.is-active {
+  color: #c26b1b;
+  position: relative;
+}
+
+.site-header__nav a.is-active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: -0.4rem;
+  height: 2px;
+  border-radius: 999px;
+  background: rgba(194, 107, 27, 0.85);
+}
+
 @media (max-width: 700px) {
   .site-header__content {
     flex-direction: column;

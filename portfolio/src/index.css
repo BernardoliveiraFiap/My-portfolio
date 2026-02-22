@@ -36,8 +36,9 @@ a {
   flex: 1;
 }
 
-section {
-  scroll-margin-top: 90px;
+section,
+footer {
+  scroll-margin-top: 120px;
 }
 
 button {

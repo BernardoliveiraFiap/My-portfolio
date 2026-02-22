@@ -1,5 +1,6 @@
 import Header from "./components/Header/Header";
 import Footer from "./components/Footer/Footer";
+import SectionJump from "./components/SectionJump/SectionJump";
 import Home from "./pages/Home/Home";
 
 const App = () => {
@@ -11,6 +12,7 @@ const App = () => {
       <main className="layout__main">
         <Home />
       </main>
+      <SectionJump />
       <Footer />
     </div>
   )

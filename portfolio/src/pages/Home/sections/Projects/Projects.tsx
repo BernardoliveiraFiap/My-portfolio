@@ -2,10 +2,10 @@ import "../../../../css/Projects.css";
 
 const Projects = () => {
   return (
-    <section className="projects">
+    <section className="projects" id="projects">
       <div className="projects__content">
         <div className="projects__header">
-          <h2 className="projects__title" id="projects">PROJETOS/EXPERIÊNCIA</h2>
+          <h2 className="projects__title">PROJETOS/EXPERIÊNCIA</h2>
           <p className="projects__subtitle">
             Experiências recentes com foco em produtos digitais escaláveis.
           </p>

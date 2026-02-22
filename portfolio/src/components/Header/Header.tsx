@@ -1,6 +1,10 @@
+import useActiveSection from "../../hooks/useActiveSection";
+import { sections } from "../../data/sections";
 import "../../css/Header.css";
 
 const Header = () => {
+  const activeId = useActiveSection();
+
   return (
     <header className="site-header">
       <div className="site-header__content">
@@ -8,12 +12,15 @@ const Header = () => {
           Enzo Oliveira
         </a>
         <nav className="site-header__nav" aria-label="Navegação principal">
-          <a href="#top">Início</a>
-          <a href="#hard-skills">Hard Skills</a>
-          <a href="#soft-skills">Soft Skills</a>
-          <a href="#projects">Projetos</a>
-          <a href="#certifications">Certificações</a>
-          <a href="#contato">Contato</a>
+          {sections.map((section) => (
+            <a
+              key={section.id}
+              className={activeId === section.id ? "is-active" : ""}
+              href={`#${section.id}`}
+            >
+              {section.label}
+            </a>
+          ))}
         </nav>
       </div>
     </header>
