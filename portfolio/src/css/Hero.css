@@ -127,7 +127,7 @@
 	text-transform: uppercase;
 	font-weight: 600;
 	font-size: clamp(1rem, 1.6vw, 1.3rem);
-	color: rgba(194, 107, 27, 0.9);
+	color: rgba(194, 107, 27, 0.65);
 	text-shadow: 0 0 18px rgba(0, 0, 0, 0.85);
 }
 
@@ -138,13 +138,13 @@
 	transform: translateX(-50%);
 	margin: 0;
 	padding: 0.35rem 0.8rem;
-	border: 1px solid rgba(194, 107, 27, 0.9);
+	border: 1px solid rgba(194, 107, 27, 0.55);
 	border-radius: 999px;
 	background: rgba(0, 0, 0, 0.55);
 	backdrop-filter: blur(4px);
 	z-index: 1;
 	pointer-events: none;
-	box-shadow: 0 0 18px rgba(194, 107, 27, 0.35);
+	box-shadow: 0 0 14px rgba(194, 107, 27, 0.22);
 }
 
 .hero__accent {
