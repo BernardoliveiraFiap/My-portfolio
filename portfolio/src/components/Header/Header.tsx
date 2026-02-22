@@ -1,11 +1,8 @@
-import useActiveSection from "../../hooks/useActiveSection";
 import { sections } from "../../data/sections";
 import { handleSectionLink } from "../../utils/scrollToSection";
 import "../../css/Header.css";
 
 const Header = () => {
-  const activeId = useActiveSection();
-
   return (
     <header className="site-header">
       <div className="site-header__content">
@@ -20,7 +17,6 @@ const Header = () => {
           {sections.map((section) => (
             <a
               key={section.id}
-              className={activeId === section.id ? "is-active" : ""}
               href={`#${section.id}`}
               onClick={(event) => handleSectionLink(event, section.id, "center")}
             >
