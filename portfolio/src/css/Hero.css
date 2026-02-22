@@ -2,25 +2,241 @@
 .hero {
 	min-height: 60vh;
 	padding: 5rem 6vw;
-	display: flex;
-	align-items: center;
+	display: block;
 	background: #000;
 	color: #fff;
+	padding-bottom: 7rem;
+	overflow: hidden;
+}
+
+.hero__content {
+	max-width: 900px;
 }
 
 .hero__title {
-	font-size: clamp(2rem, 4vw, 3.5rem);
-	letter-spacing: 0.02em;
+	font-size: clamp(2.4rem, 5vw, 4.4rem);
+	letter-spacing: 0.08em;
 	text-transform: uppercase;
+	font-weight: 700;
 }
 
 .hero__subtitle {
 	margin-top: 0.8rem;
 	max-width: 680px;
 	line-height: 1.6;
+	font-size: 1.15rem;
 	color: rgba(255, 255, 255, 0.78);
+}
+
+.hero__prompt {
+	letter-spacing: 0.18em;
+	text-transform: uppercase;
+	font-weight: 600;
+	font-size: clamp(1rem, 1.6vw, 1.3rem);
+	color: rgba(255, 255, 255, 0.85);
+	text-shadow: 0 0 18px rgba(0, 0, 0, 0.85);
+}
+
+.hero__prompt--overlay {
+	position: absolute;
+	left: 50%;
+	top: 5%;
+	transform: translateX(-50%);
+	margin: 0;
+	padding: 0.35rem 0.8rem;
+	border: 1px solid rgba(255, 255, 255, 0.1);
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.55);
+	backdrop-filter: blur(4px);
+	z-index: 1;
+	pointer-events: none;
+	animation: heroPromptPulse 2.6s ease-in-out infinite;
+}
+
+@keyframes heroPromptPulse {
+	0%, 100% {
+		transform: translateX(-50%) scale(1);
+	}
+	45% {
+		transform: translateX(-50%) scale(1.03);
+	}
+	50% {
+		transform: translateX(-50%) translateY(-1px) scale(1.02);
+	}
+	55% {
+		transform: translateX(-50%) translateY(1px) scale(1.02);
+	}
 }
 
 .hero__accent {
 	color: #c26b1b;
+}
+
+.hero__image {
+	display: block;
+	width: 100%;
+    margin-bottom: 2.8rem;
+	height: auto;
+	max-height: 65vh;
+	object-fit: contain;
+}
+
+.hero__image-wrap {
+	position: relative;
+	width: min(90vw, 760px);
+	margin: 2.5rem auto 0;
+	background: #000;
+}
+
+.hero__image-wrap::before {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		linear-gradient(180deg, rgba(0, 0, 0, 0.98), transparent 60%),
+		linear-gradient(0deg, rgba(0, 0, 0, 0.9), transparent 25%),
+		linear-gradient(90deg, rgba(0, 0, 0, 0.9), transparent 20%),
+		linear-gradient(270deg, rgba(0, 0, 0, 0.9), transparent 20%);
+	pointer-events: none;
+}
+
+.hero__image-wrap::after {
+	content: "";
+	position: absolute;
+	inset: 0;
+	background:
+		radial-gradient(circle at 50% 18%, rgba(0, 0, 0, 0.96) 0, rgba(0, 0, 0, 0.85) 35%, transparent 60%);
+	pointer-events: none;
+}
+
+.hero__hotspot {
+	position: absolute;
+	display: block;
+	width: 28%;
+	height: 28%;
+	border-radius: 999px;
+	background: transparent;
+	opacity: 1;
+	cursor: pointer;
+	z-index: 2;
+}
+
+.hero__hotspot::after {
+	content: attr(data-label);
+	position: absolute;
+	left: 50%;
+	top: -2.2rem;
+	transform: translateX(-50%);
+	padding: 0.35rem 0.7rem;
+	border-radius: 999px;
+	background: rgba(0, 0, 0, 0.55);
+	border: 1px solid rgba(255, 255, 255, 0.2);
+	color: #fff;
+	font-size: 0.9rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	white-space: nowrap;
+	opacity: 1;
+	transition: background 150ms ease, color 150ms ease, border-color 150ms ease;
+	pointer-events: none;
+}
+
+.hero__hotspot:hover::after {
+	background: rgba(194, 107, 27, 0.25);
+	color: #c26b1b;
+	border-color: rgba(194, 107, 27, 0.95);
+}
+
+.hero__hotspot:focus-visible::after {
+	background: rgba(194, 107, 27, 0.25);
+	color: #c26b1b;
+	border-color: rgba(194, 107, 27, 0.95);
+}
+
+.hero__hotspot--red {
+	left: 8%;
+	top: 62%;
+}
+
+.hero__hotspot--blue {
+	right: 8%;
+	top: 62%;
+}
+
+@media (max-width: 1024px) {
+	.hero {
+		padding: 4.5rem 6vw 6rem;
+	}
+
+	.hero__image-wrap {
+		width: min(94vw, 680px);
+	}
+
+	.hero__prompt--overlay {
+		top: 8%;
+	}
+}
+
+@media (max-width: 900px) {
+	.hero__image-wrap {
+		width: 100%;
+		margin-top: 2rem;
+	}
+
+	.hero__image {
+		max-height: 55vh;
+	}
+}
+
+@media (max-width: 700px) {
+	.hero {
+		padding: 4rem 6vw 5rem;
+	}
+
+	.hero__title {
+		letter-spacing: 0.04em;
+	}
+
+	.hero__subtitle {
+		font-size: 2.05rem;
+	}
+
+	.hero__prompt--overlay {
+		top: 10%;
+		font-size: 0.78rem;
+	}
+
+	.hero__hotspot {
+		width: 34%;
+		height: 34%;
+	}
+
+	.hero__hotspot--red {
+		left: 4%;
+		top: 66%;
+	}
+
+	.hero__hotspot--blue {
+		right: 4%;
+		top: 66%;
+	}
+
+	.hero__image {
+		max-height: 50vh;
+	}
+}
+
+@media (max-width: 420px) {
+	.hero {
+		padding: 3.5rem 6vw 4.5rem;
+	}
+
+	.hero__prompt--overlay {
+		top: 12%;
+		padding: 0.25rem 0.6rem;
+	}
+
+	.hero__image {
+		max-height: 45vh;
+	}
 }
