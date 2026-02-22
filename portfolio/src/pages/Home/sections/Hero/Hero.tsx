@@ -50,7 +50,7 @@ const Hero = () => {
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAUVBMVEVHcEz////////////////////////////////////////////////r+u/Z9uL1/fhe24gAzUkf02Sh6LZ+4Z1t3pHG8dMC0Viw7MKQ5apL2HsasPsVAAAADXRSTlMANIfD7f8zYGIW4N4+qsA5tgAAAQdJREFUeAF9k4UWgzAMRYM8vG6j//+hKyfQ+S6WEq9QpWm7Hui7dqB3xh6VfnpRzQteWGeqbPhg+6Or2hkVIVWVOfIKRmpTsA7MQoUJjDchCiVdSpJ/jEXZs6iTrFYs9UQD/3FG4MIn/jbUsmBukNXX7jhoqcPBLR2BPVBHhe5MGcKhDGAE5+iJh3kHoolg1FnSqdRFiZAEIJ6VHHbPKOR0iyYISKM4LBcUeehNskbCZy7oasV6LsX5CHEmb6k5lQ4XymoWBuKkwkjpFGdImXX9sUG47WSS0bvz1uxgJiosALyPCtHnrNm/sL4u9ivz/23yf4Mx84oXlpmemZ439UjvDNdxaOjiDkjvFKpa/ei0AAAAAElFTkSuQmCC"
                 alt="WhatsApp"
               />
-              Mandar Mensagem
+              Contratar
             </a>
             <a
               className="hero__button"
@@ -70,8 +70,7 @@ const Hero = () => {
         </div>
         <p className="hero__subtitle">Desenvolvedor Full Stack</p>
         <p className="hero__subtitle">
-          Soluções web e mobile com foco em performance, segurança e
-          escalabilidade.
+          Desenvolvedor de Software com formação tecnológica, especializado em soluções Web e Mobile. Atuo na arquitetura front-end e back-end, incluindo bancos de dados.
         </p>
       </div>
       <div className="hero__image-wrap">

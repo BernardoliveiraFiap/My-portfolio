@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="site-footer__info">
           <h2 className="site-footer__title">Vamos Conversar</h2>
           <p className="site-footer__text">
-            Disponível para freelas e oportunidades Full Stack.
+            Disponível para freelas e oportunidades.
           </p>
         </div>
         <div className="site-footer__links">

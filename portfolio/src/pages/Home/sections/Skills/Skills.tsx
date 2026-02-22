@@ -12,13 +12,20 @@ const Skills = () => {
           </p>
           <div className="skills__card">
             <ul>
-              <li>TypeScript, React.js, Next.js e Node.js</li>
-              <li>React Native (apps performáticos)</li>
-              <li>Python para automações e APIs</li>
-              <li>SQL e Amazon RDS (Postgres)</li>
-              <li>AWS: S3, Lambda, Cognito, VPC, EC2, EKS e SES</li>
-              <li>CI/CD e publicação em Play Store e App Store</li>
-              <li>Figma para colaboração com UX/UI</li>
+              <li>TypeScript / JavaScript (ES6+)</li>
+<li>React.js / Next.js</li>
+<li>Node.js</li>
+<li>React Native (Expo)</li>
+<li>C#  .NET (Core / 8+)</li>
+
+<li>ORM (Entity Framework, Prisma)</li>
+
+<li>Bancos de Dados SQL (PostgreSQL, SQL Server) e NoSQL (Firebase)</li>
+<li>Cloud Computing (AWS, Azure, GCP)</li>
+<li>Docker & Containerização</li>
+
+<li>CI/CD e Automação de Publicação (App Store & Play Store)</li>
+<li>Figma para colaboração com UX/UI</li>
               
             </ul>
           </div>
