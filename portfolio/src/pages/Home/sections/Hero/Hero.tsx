@@ -79,7 +79,15 @@ const Hero = () => {
           src={matrixImage}
           alt="Imagem estilo cyberpunk com duas pílulas nas mãos"
         />
-        <p className="hero__prompt hero__prompt--overlay">Escolha uma pílula</p>
+        <p className="hero__prompt hero__prompt--overlay" aria-label="Escolha uma pílula">
+          <span className="hero__prompt-size" aria-hidden="true">
+            Escolha uma pílula
+          </span>
+          <span className="hero__prompt-track" aria-hidden="true">
+            <span className="hero__prompt-item">Escolha uma pílula</span>
+            <span className="hero__prompt-item">Escolha uma pílula</span>
+          </span>
+        </p>
         <a
           className="hero__hotspot hero__hotspot--red"
           href="#hard-skills"

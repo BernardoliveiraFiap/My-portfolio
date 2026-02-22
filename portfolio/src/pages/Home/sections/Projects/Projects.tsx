@@ -61,6 +61,7 @@ const Projects = () => {
               <span>TypeScript</span>
               <span>Node.js</span>
               <span>SQL</span>
+              <span>AWS</span>
               <span>DevOps</span>
             </div>
             <ProjectButton

@@ -145,6 +145,40 @@
 	z-index: 1;
 	pointer-events: none;
 	box-shadow: 0 0 14px rgba(194, 107, 27, 0.22);
+	overflow: hidden;
+	display: inline-block;
+}
+
+.hero__prompt-size {
+	display: inline-block;
+	white-space: nowrap;
+	opacity: 0;
+}
+
+.hero__prompt-track {
+	position: absolute;
+	left: 0.8rem;
+	top: 50%;
+	transform: translateY(-50%);
+	display: inline-flex;
+	align-items: center;
+	white-space: nowrap;
+	animation: heroPromptCarousel 7s linear infinite;
+	will-change: transform;
+}
+
+.hero__prompt-item {
+	display: inline-block;
+	padding-right: 2rem;
+}
+
+@keyframes heroPromptCarousel {
+	0% {
+		transform: translate(0, -50%);
+	}
+	100% {
+		transform: translate(-50%, -50%);
+	}
 }
 
 .hero__accent {
