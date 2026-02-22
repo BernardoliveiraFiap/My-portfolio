@@ -11,7 +11,7 @@ const Footer = () => {
           </p>
         </div>
         <div className="site-footer__links">
-          <a href="mailto:enzooliveira.dev@gmail.com">enzooliveira.dev@gmail.com</a>
+          <a href="mailto:enzooliveira.dev@gmail.com">enzo.o.bernardo5@gmail.com</a>
           <a
             href="https://www.linkedin.com/in/enzoliveiria/"
             target="_blank"

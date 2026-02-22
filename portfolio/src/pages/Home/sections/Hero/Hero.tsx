@@ -1,6 +1,7 @@
 import "../../../../css/Hero.css";
 import matrixImage from "../../../../assets/matrix.png";
 import { handleSectionLink } from "../../../../utils/scrollToSection";
+import { generateCurriculoPdf } from "../../../../utils/curriculo";
 
 const Hero = () => {
   return (
@@ -31,7 +32,7 @@ const Hero = () => {
             </a>
           </div>
           <div className="hero__actions">
-            <button className="hero__button" type="button">
+            <button className="hero__button" type="button" onClick={generateCurriculoPdf}>
               <img
                 className="hero__button-icon"
                 src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M21%2015v4a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2v-4%27/%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5%27/%3E%3Cpath%20d%3D%27M12%2015V3%27/%3E%3C/svg%3E"
