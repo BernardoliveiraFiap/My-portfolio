@@ -36,7 +36,7 @@ const Hero = () => {
                 src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M21%2015v4a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2v-4%27/%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5%27/%3E%3Cpath%20d%3D%27M12%2015V3%27/%3E%3C/svg%3E"
                 alt="Download"
               />
-              Baixar curriculo
+              Baixar Currículo
             </button>
             <a
               className="hero__button hero__button--whatsapp"
@@ -49,7 +49,13 @@ const Hero = () => {
                 src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAUVBMVEVHcEz////////////////////////////////////////////////r+u/Z9uL1/fhe24gAzUkf02Sh6LZ+4Z1t3pHG8dMC0Viw7MKQ5apL2HsasPsVAAAADXRSTlMANIfD7f8zYGIW4N4+qsA5tgAAAQdJREFUeAF9k4UWgzAMRYM8vG6j//+hKyfQ+S6WEq9QpWm7Hui7dqB3xh6VfnpRzQteWGeqbPhg+6Or2hkVIVWVOfIKRmpTsA7MQoUJjDchCiVdSpJ/jEXZs6iTrFYs9UQD/3FG4MIn/jbUsmBukNXX7jhoqcPBLR2BPVBHhe5MGcKhDGAE5+iJh3kHoolg1FnSqdRFiZAEIJ6VHHbPKOR0iyYISKM4LBcUeehNskbCZy7oasV6LsX5CHEmb6k5lQ4XymoWBuKkwkjpFGdImXX9sUG47WSS0bvz1uxgJiosALyPCtHnrNm/sL4u9ivz/23yf4Mx84oXlpmemZ439UjvDNdxaOjiDkjvFKpa/ei0AAAAAElFTkSuQmCC"
                 alt="WhatsApp"
               />
-              Mandar mensagem
+              Mandar Mensagem
+            </a>
+            <a className="hero__button" href="#certifications">
+              Ver Certificações
+            </a>
+            <a className="hero__button" href="#projects">
+              Ver Projetos
             </a>
           </div>
         </div>
@@ -69,14 +75,14 @@ const Hero = () => {
         <a
           className="hero__hotspot hero__hotspot--red"
           href="#hard-skills"
-          data-label="Hard skills"
-          aria-label="Ir para a seção de hard skills"
+          data-label="Hard Skills"
+          aria-label="Ir para a seção de Hard Skills"
         />
         <a
           className="hero__hotspot hero__hotspot--blue"
           href="#soft-skills"
-          data-label="Soft skills"
-          aria-label="Ir para a seção de soft skills"
+          data-label="Soft Skills"
+          aria-label="Ir para a seção de Soft Skills"
         />
       </div>
     </section>

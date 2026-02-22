@@ -7,11 +7,12 @@ const Header = () => {
         <a className="site-header__brand" href="#top">
           Enzo Oliveira
         </a>
-        <nav className="site-header__nav" aria-label="Navegacao principal">
-          <a href="#top">Inicio</a>
-          <a href="#hard-skills">Hard skills</a>
-          <a href="#soft-skills">Soft skills</a>
-          <a href="#certifications">Certificacoes</a>
+        <nav className="site-header__nav" aria-label="Navegação principal">
+          <a href="#top">Início</a>
+          <a href="#hard-skills">Hard Skills</a>
+          <a href="#soft-skills">Soft Skills</a>
+          <a href="#projects">Projetos</a>
+          <a href="#certifications">Certificações</a>
           <a href="#contato">Contato</a>
         </nav>
       </div>

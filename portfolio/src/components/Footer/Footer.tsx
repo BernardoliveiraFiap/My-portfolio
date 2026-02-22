@@ -5,9 +5,9 @@ const Footer = () => {
     <footer className="site-footer" id="contato">
       <div className="site-footer__content">
         <div className="site-footer__info">
-          <h2 className="site-footer__title">Vamos conversar</h2>
+          <h2 className="site-footer__title">Vamos Conversar</h2>
           <p className="site-footer__text">
-            Disponivel para freelas e oportunidades full stack.
+            Disponível para freelas e oportunidades Full Stack.
           </p>
         </div>
         <div className="site-footer__links">

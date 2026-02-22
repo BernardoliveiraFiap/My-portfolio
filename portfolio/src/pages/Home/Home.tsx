@@ -1,5 +1,6 @@
 import Hero from "./sections/Hero/Hero";
 import Skills from "./sections/Skills/Skills";
+import Projects from "./sections/Projects/Projects";
 import Certifications from "./sections/Certifications/Certifications";
 
 const Home = () => {
@@ -9,6 +10,7 @@ const Home = () => {
     <>
       <Hero />
       <Skills />
+      <Projects />
       <Certifications />
     </>
   )

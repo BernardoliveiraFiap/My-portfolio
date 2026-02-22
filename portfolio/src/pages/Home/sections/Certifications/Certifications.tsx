@@ -4,7 +4,7 @@ const Certifications = () => {
   return (
     <section className="certifications" id="certifications">
       <div className="certifications__content">
-        <h2 className="certifications__title">Certificacoes</h2>
+        <h2 className="certifications__title">Certificações</h2>
         <p className="certifications__subtitle">
           Reconhecimentos oficiais em cloud e fundamentos de infraestrutura.
         </p>
