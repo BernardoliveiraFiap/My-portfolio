@@ -1,13 +1,16 @@
 import "../../css/Footer.css";
+import useI18n from "../../hooks/useI18n";
 
 const Footer = () => {
+  const { t } = useI18n();
+
   return (
     <footer className="site-footer" id="contato">
       <div className="site-footer__content">
         <div className="site-footer__info">
-          <h2 className="site-footer__title">Vamos Conversar</h2>
+          <h2 className="site-footer__title">{t("footer.title")}</h2>
           <p className="site-footer__text">
-            Disponível para freelas e oportunidades.
+            {t("footer.text")}
           </p>
         </div>
         <div className="site-footer__links">
@@ -25,7 +28,9 @@ const Footer = () => {
         </div>
       </div>
       <div className="site-footer__bottom">
-        <span>© {new Date().getFullYear()} Enzo Bernardo</span>
+        <span>
+          © {new Date().getFullYear()} {t("footer.copyrightName")}
+        </span>
       </div>
     </footer>
   );

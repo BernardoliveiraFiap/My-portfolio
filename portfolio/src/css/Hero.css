@@ -7,6 +7,7 @@
 	color: #fff;
 	padding-bottom: 7rem;
 	overflow: hidden;
+	position: relative;
 }
 
 .hero__content {
@@ -21,11 +22,27 @@
 	justify-content: flex-start;
 }
 
-.hero__name {
+.hero__topbar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 1.5rem;
+	width: 100%;
+}
+
+.hero__language-float {
+	position: absolute;
+	top: 5rem;
+	right: 6vw;
+	z-index: 2;
+}
+
+.hero__identity {
 	display: flex;
 	align-items: center;
 	gap: 1rem;
 	flex-wrap: wrap;
+	min-width: 0;
 }
 
 .hero__avatar {
@@ -61,6 +78,51 @@
 	width: 30px;
 	height: 30px;
 	display: block;
+}
+
+.language-switcher {
+	display: flex;
+	align-items: center;
+	gap: 0.4rem;
+	padding: 0.25rem;
+	border-radius: 999px;
+	border: 1px solid rgba(194, 107, 27, 0.55);
+	background: rgba(255, 255, 255, 0.04);
+}
+
+.language-switcher__button {
+	border: 0;
+	border-radius: 999px;
+	padding: 0.25rem 0.7rem;
+	font-size: 0.75rem;
+	letter-spacing: 0.08em;
+	text-transform: uppercase;
+	background: transparent;
+	color: rgba(255, 255, 255, 0.75);
+	cursor: pointer;
+	transition: color 150ms ease, background 150ms ease;
+}
+
+.language-switcher__button:hover,
+.language-switcher__button:focus-visible {
+	color: #fff;
+}
+
+.language-switcher__button.is-active {
+	background: rgba(194, 107, 27, 0.2);
+	color: #c26b1b;
+}
+
+@media (max-width: 900px) {
+	.hero__topbar {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	.hero__language-float {
+		position: static;
+		margin-bottom: 0.8rem;
+	}
 }
 
 .hero__actions {
