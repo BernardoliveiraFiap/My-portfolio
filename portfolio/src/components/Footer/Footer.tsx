@@ -25,7 +25,7 @@ const Footer = () => {
         </div>
       </div>
       <div className="site-footer__bottom">
-        <span>© {new Date().getFullYear()} Enzo Oliveira</span>
+        <span>© {new Date().getFullYear()} Enzo Bernardo</span>
       </div>
     </footer>
   );

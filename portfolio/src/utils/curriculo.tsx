@@ -163,7 +163,7 @@ export const generateCurriculoPdf = () => {
 
   doc.setFont("helvetica", "bold");
   doc.setFontSize(16);
-  doc.text("Enzo Oliveira Bernardo", marginLeft, cursorY);
+  doc.text("Enzo Bernardo", marginLeft, cursorY);
   cursorY += 22;
 
   doc.setFont("helvetica", "normal");
@@ -182,5 +182,5 @@ export const generateCurriculoPdf = () => {
     addBullets(section.items);
   });
 
-  doc.save("Enzooliveira.pdf");
+  doc.save("EnzoBernardo.pdf");
 };

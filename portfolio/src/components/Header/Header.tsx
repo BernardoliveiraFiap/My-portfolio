@@ -11,7 +11,7 @@ const Header = () => {
           href="#top"
           onClick={(event) => handleSectionLink(event, "top", "center")}
         >
-          Enzo Oliveira
+          Enzo Bernardo
         </a>
         <nav className="site-header__nav" aria-label="Navegação principal">
           {sections.map((section) => (
