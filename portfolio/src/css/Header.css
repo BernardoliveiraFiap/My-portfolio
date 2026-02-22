@@ -75,3 +75,13 @@
     gap: 0.8rem 1rem;
   }
 }
+
+@media (max-width: 520px) {
+  .site-header__content {
+    padding: 0.8rem 6vw;
+  }
+
+  .site-header__nav a {
+    font-size: 0.82rem;
+  }
+}

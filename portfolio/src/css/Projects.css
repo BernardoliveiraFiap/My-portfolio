@@ -11,7 +11,7 @@
 
 .projects__header {
   display: flex;
-  align-items: flex-end;
+  align-items: flex-start;
   justify-content: space-between;
   gap: 1.5rem;
   flex-wrap: wrap;
@@ -22,12 +22,17 @@
   text-transform: uppercase;
   letter-spacing: 0.08em;
   font-weight: 700;
+  flex: 1 1 260px;
+  min-width: 0;
+  overflow-wrap: break-word;
 }
 
 .projects__subtitle {
   margin: 0;
   color: rgba(255, 255, 255, 0.75);
   max-width: 420px;
+  flex: 1 1 220px;
+  min-width: 0;
 }
 
 .projects__grid {
@@ -44,6 +49,7 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
   display: grid;
   gap: 0.9rem;
+  min-width: 0;
 }
 
 .projects__card:hover,
@@ -133,5 +139,23 @@
 @media (max-width: 700px) {
   .projects {
     padding: 6rem 6vw;
+  }
+}
+
+@media (max-width: 520px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__media {
+    height: 150px;
+  }
+
+  .projects__tags span {
+    font-size: 0.78rem;
+  }
+
+  .projects__cta {
+    width: 100%;
   }
 }
