@@ -1,0 +1,82 @@
+.certifications {
+  padding: 8rem 6vw;
+  min-height: 80vh;
+  background: #000;
+  color: #fff;
+}
+
+.certifications__content {
+  width: min(1100px, 100%);
+  margin: 0 auto;
+}
+
+.certifications__title {
+  font-size: clamp(2rem, 3.4vw, 3rem);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}
+
+.certifications__subtitle {
+  margin-top: 0.8rem;
+  color: rgba(255, 255, 255, 0.78);
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.certifications__grid {
+  margin-top: 2.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.6rem;
+}
+
+.certifications__card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem 1.4rem;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.04);
+  color: #fff;
+  text-decoration: none;
+  transition: border-color 150ms ease, background 150ms ease, transform 150ms ease;
+}
+
+.certifications__card:hover,
+.certifications__card:focus-visible {
+  border-color: rgba(194, 107, 27, 0.7);
+  background: rgba(194, 107, 27, 0.12);
+  transform: translateY(-2px);
+}
+
+.certifications__badge {
+  width: 48px;
+  height: 48px;
+}
+
+.certifications__card h3 {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.certifications__card p {
+  margin: 0.3rem 0 0;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+@media (max-width: 700px) {
+  .certifications {
+    padding: 6rem 6vw;
+  }
+
+  .certifications__card {
+    padding: 1rem 1.1rem;
+  }
+
+  .certifications__badge {
+    width: 40px;
+    height: 40px;
+  }
+}

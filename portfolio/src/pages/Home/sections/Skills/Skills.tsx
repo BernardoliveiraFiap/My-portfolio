@@ -7,18 +7,18 @@ const Skills = () => {
         <div className="skills__content">
           <h2 className="skills__title">Hard skills</h2>
           <p className="skills__subtitle">
-            Experiencia em desenvolvimento full stack, mobile e cloud, com foco
-            em performance e entrega de produtos escalaveis.
+            Experiência em desenvolvimento full stack, mobile e cloud, com foco
+            em performance e entrega de produtos escaláveis.
           </p>
           <div className="skills__card">
             <ul>
               <li>TypeScript, React.js, Next.js e Node.js</li>
-              <li>React Native (apps performaticos)</li>
-              <li>Python para automacoes e APIs</li>
+              <li>React Native (apps performáticos)</li>
+              <li>Python para automações e APIs</li>
               <li>SQL e Amazon RDS (Postgres)</li>
               <li>AWS: S3, Lambda, Cognito, VPC, EC2, EKS e SES</li>
-              <li>CI/CD e publicacao em Play Store e App Store</li>
-              <li>Figma para colaboracao com UX/UI</li>
+              <li>CI/CD e publicação em Play Store e App Store</li>
+              <li>Figma para colaboração com UX/UI</li>
               <li>App: GEORISCO (Play Store e App Store)</li>
             </ul>
           </div>
@@ -28,16 +28,16 @@ const Skills = () => {
         <div className="skills__content">
           <h2 className="skills__title">Soft skills</h2>
           <p className="skills__subtitle">
-            Boas praticas, comunicacao e colaboracao para entregar valor com
-            consistencia.
+            Boas práticas, comunicação e colaboração para entregar valor com
+            consistência.
           </p>
           <div className="skills__card">
             <ul>
-              <li>Comunicacao clara com time e clientes</li>
-              <li>Colaboracao e trabalho em equipe</li>
-              <li>Organizacao e foco em qualidade</li>
+              <li>Comunicação clara com time e clientes</li>
+              <li>Colaboração e trabalho em equipe</li>
+              <li>Organização e foco em qualidade</li>
               <li>Proatividade para resolver problemas</li>
-              <li>Aprendizado continuo e adaptabilidade</li>
+              <li>Aprendizado contínuo e adaptabilidade</li>
             </ul>
           </div>
         </div>
