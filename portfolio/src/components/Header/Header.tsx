@@ -1,5 +1,6 @@
 import useActiveSection from "../../hooks/useActiveSection";
 import { sections } from "../../data/sections";
+import { handleSectionLink } from "../../utils/scrollToSection";
 import "../../css/Header.css";
 
 const Header = () => {
@@ -8,7 +9,11 @@ const Header = () => {
   return (
     <header className="site-header">
       <div className="site-header__content">
-        <a className="site-header__brand" href="#top">
+        <a
+          className="site-header__brand"
+          href="#top"
+          onClick={(event) => handleSectionLink(event, "top", "center")}
+        >
           Enzo Oliveira
         </a>
         <nav className="site-header__nav" aria-label="Navegação principal">
@@ -17,6 +22,7 @@ const Header = () => {
               key={section.id}
               className={activeId === section.id ? "is-active" : ""}
               href={`#${section.id}`}
+              onClick={(event) => handleSectionLink(event, section.id, "center")}
             >
               {section.label}
             </a>

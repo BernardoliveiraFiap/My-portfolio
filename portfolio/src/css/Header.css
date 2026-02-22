@@ -5,6 +5,7 @@
   backdrop-filter: blur(12px);
   background: rgba(0, 0, 0, 0.7);
   border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  min-height: var(--header-height);
 }
 
 .site-header__content {
@@ -15,6 +16,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 1.5rem;
+  min-height: var(--header-height);
 }
 
 .site-header__brand {

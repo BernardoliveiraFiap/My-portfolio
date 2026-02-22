@@ -1,6 +1,7 @@
 import { useMemo } from "react";
 import useActiveSection from "../../hooks/useActiveSection";
 import { sections } from "../../data/sections";
+import { handleSectionLink } from "../../utils/scrollToSection";
 import "../../css/SectionJump.css";
 
 const SectionJump = () => {
@@ -23,7 +24,11 @@ const SectionJump = () => {
   }
 
   return (
-    <a className="section-jump" href={`#${nextSection.id}`}>
+    <a
+      className="section-jump"
+      href={`#${nextSection.id}`}
+      onClick={(event) => handleSectionLink(event, nextSection.id, "center")}
+    >
       <span className="section-jump__label">
         {activeId === "contato" ? nextSection.label : `Proxima: ${nextSection.label}`}
       </span>

@@ -1,5 +1,6 @@
 import "../../../../css/Hero.css";
 import matrixImage from "../../../../assets/matrix.png";
+import { handleSectionLink } from "../../../../utils/scrollToSection";
 
 const Hero = () => {
   return (
@@ -51,10 +52,18 @@ const Hero = () => {
               />
               Mandar Mensagem
             </a>
-            <a className="hero__button" href="#certifications">
+            <a
+              className="hero__button"
+              href="#certifications"
+              onClick={(event) => handleSectionLink(event, "certifications", "center")}
+            >
               Ver Certificações
             </a>
-            <a className="hero__button" href="#projects">
+            <a
+              className="hero__button"
+              href="#projects"
+              onClick={(event) => handleSectionLink(event, "projects", "center")}
+            >
               Ver Projetos
             </a>
           </div>
@@ -77,12 +86,14 @@ const Hero = () => {
           href="#hard-skills"
           data-label="Hard Skills"
           aria-label="Ir para a seção de Hard Skills"
+          onClick={(event) => handleSectionLink(event, "hard-skills", "center")}
         />
         <a
           className="hero__hotspot hero__hotspot--blue"
           href="#soft-skills"
           data-label="Soft Skills"
           aria-label="Ir para a seção de Soft Skills"
+          onClick={(event) => handleSectionLink(event, "soft-skills", "center")}
         />
       </div>
     </section>
