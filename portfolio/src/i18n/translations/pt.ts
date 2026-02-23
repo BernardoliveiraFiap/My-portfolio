@@ -1,6 +1,7 @@
 const pt = {
   header: {
-    brand: "Enzo Bernardo",
+    brandFirst: "Enzo",
+    brandLast: "Bernardo",
     navLabel: "Navegação principal",
     languageLabel: "Idioma",
   },

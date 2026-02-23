@@ -1,6 +1,7 @@
 const en = {
   header: {
-    brand: "Enzo Bernardo",
+    brandFirst: "Enzo",
+    brandLast: "Bernardo",
     navLabel: "Primary navigation",
     languageLabel: "Language",
   },

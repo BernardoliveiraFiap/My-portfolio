@@ -14,7 +14,10 @@ const Header = () => {
           href="#top"
           onClick={(event) => handleSectionLink(event, "top", "center")}
         >
-          {t("header.brand")}
+          {t("header.brandFirst")} {" "}
+          <span className="site-header__brand-accent">
+            {t("header.brandLast")}
+          </span>
         </a>
         <nav className="site-header__nav" aria-label={t("header.navLabel")}>
           {sections.map((section) => (

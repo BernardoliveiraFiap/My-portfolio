@@ -28,6 +28,10 @@
   text-decoration: none;
 }
 
+.site-header__brand-accent {
+  color: #c26b1b;
+}
+
 .site-header__nav {
   display: flex;
   align-items: center;
