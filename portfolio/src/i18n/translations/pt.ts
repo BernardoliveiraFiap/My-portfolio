@@ -31,9 +31,18 @@ const pt = {
     softSkillsLink: "Ir para a seção de Soft Skills",
   },
   footer: {
-    title: "Vamos Conversar",
-    text: "Disponível para freelas e oportunidades.",
+    title: "Obrigado pela visita",
+    text: "Portfólio atualizado com projetos reais, foco em performance e arquitetura escalável.",
+    backToTop: "Voltar ao início",
     copyrightName: "Enzo Bernardo",
+  },
+  contact: {
+    title: "Contato",
+    subtitle: "Escolha o melhor canal e vamos conversar sobre sua ideia ou oportunidade.",
+    emailLabel: "E-mail",
+    linkedinLabel: "LinkedIn",
+    whatsappLabel: "WhatsApp",
+    sendMessage: "Enviar mensagem",
   },
   projects: {
     title: "PROJETOS",

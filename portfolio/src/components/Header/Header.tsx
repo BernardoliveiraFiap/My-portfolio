@@ -24,7 +24,13 @@ const Header = () => {
             <a
               key={section.id}
               href={`#${section.id}`}
-              onClick={(event) => handleSectionLink(event, section.id, "center")}
+              onClick={(event) =>
+                handleSectionLink(
+                  event,
+                  section.id,
+                  section.id === "contato" ? "start" : "center"
+                )
+              }
             >
               {t(section.labelKey)}
             </a>

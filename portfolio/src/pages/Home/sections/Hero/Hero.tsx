@@ -10,10 +10,10 @@ const Hero = () => {
 
   return (
     <section className="hero" id="top">
-      <div className="hero__content">
-        <div className="hero__language-float">
-          <LanguageSwitcher />
-        </div>
+      <div className="hero__language-float">
+        <LanguageSwitcher />
+      </div>
+      <div className="hero__content spawn-item" data-spawn data-spawn-direction="left">
         <div className="hero__headline">
           <div className="hero__topbar">
             <div className="hero__identity">
@@ -87,7 +87,12 @@ const Hero = () => {
           {t("hero.subtitleSecondary")}
         </p>
       </div>
-      <div className="hero__image-wrap">
+      <div
+        className="hero__image-wrap spawn-item"
+        data-spawn
+        data-spawn-direction="left"
+        data-spawn-delay="120"
+      >
         <img
           className="hero__image"
           src={matrixImage}

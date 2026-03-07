@@ -9,7 +9,7 @@ const Skills = () => {
   return (
     <>
       <section className="skills" id="hard-skills">
-        <div className="skills__content">
+        <div className="skills__content spawn-item" data-spawn data-spawn-direction="left">
           <h2 className="skills__title">{t("skills.hardTitle")}</h2>
           <p className="skills__subtitle">
             {t("skills.hardSubtitle")}
@@ -24,7 +24,12 @@ const Skills = () => {
         </div>
       </section>
       <section className="skills" id="soft-skills">
-        <div className="skills__content">
+        <div
+          className="skills__content spawn-item"
+          data-spawn
+          data-spawn-direction="left"
+          data-spawn-delay="90"
+        >
           <h2 className="skills__title">{t("skills.softTitle")}</h2>
           <p className="skills__subtitle">
             {t("skills.softSubtitle")}

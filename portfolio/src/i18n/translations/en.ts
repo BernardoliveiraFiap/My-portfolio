@@ -31,9 +31,18 @@ const en = {
     softSkillsLink: "Go to the Soft Skills section",
   },
   footer: {
-    title: "Let's Talk",
-    text: "Available for freelance work and opportunities.",
+    title: "Thanks for visiting",
+    text: "Portfolio updated with real projects, focused on performance and scalable architecture.",
+    backToTop: "Back to top",
     copyrightName: "Enzo Bernardo",
+  },
+  contact: {
+    title: "Contact",
+    subtitle: "Pick the best channel and let's talk about your idea or opportunity.",
+    emailLabel: "E-mail",
+    linkedinLabel: "LinkedIn",
+    whatsappLabel: "WhatsApp",
+    sendMessage: "Send Message",
   },
   projects: {
     title: "PROJECTS",

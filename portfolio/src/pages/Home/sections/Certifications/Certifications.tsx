@@ -7,13 +7,18 @@ const Certifications = () => {
   return (
     <section className="certifications" id="certifications">
       <div className="certifications__content">
-        <h2 className="certifications__title">{t("certifications.title")}</h2>
-        <p className="certifications__subtitle">
-          {t("certifications.subtitle")}
-        </p>
+        <div className="spawn-item" data-spawn data-spawn-direction="left">
+          <h2 className="certifications__title">{t("certifications.title")}</h2>
+          <p className="certifications__subtitle">
+            {t("certifications.subtitle")}
+          </p>
+        </div>
         <div className="certifications__grid">
           <a
-            className="certifications__card"
+            className="certifications__card spawn-item"
+            data-spawn
+            data-spawn-direction="left"
+            data-spawn-delay="60"
             href="https://learn.microsoft.com/pt-br/users/EnzoOliveira-3869/credentials/69332B799344F0AD?ref=https%3A%2F%2Fwww.linkedin.com%2F"
             target="_blank"
             rel="noreferrer"
@@ -29,7 +34,10 @@ const Certifications = () => {
             </div>
           </a>
           <a
-            className="certifications__card"
+            className="certifications__card spawn-item"
+            data-spawn
+            data-spawn-direction="left"
+            data-spawn-delay="160"
             href="https://www.credly.com/badges/1c4cb384-02c7-4f3c-a067-c7c7c4dcac90/linked_in?t=sxsiog"
             target="_blank"
             rel="noreferrer"
