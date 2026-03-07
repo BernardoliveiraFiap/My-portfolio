@@ -26,16 +26,6 @@ const getInitialLanguage = (): SupportedLanguage => {
     return stored;
   }
 
-  if (typeof navigator !== "undefined") {
-    const preferred = navigator.language.toLowerCase();
-    if (preferred.startsWith("pt")) {
-      return "pt-BR";
-    }
-    if (preferred.startsWith("en")) {
-      return "en";
-    }
-  }
-
   return DEFAULT_LANGUAGE;
 };
 
