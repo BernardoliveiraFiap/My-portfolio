@@ -8,14 +8,14 @@ const Projects = () => {
   return (
     <section className="projects" id="projects">
       <div className="projects__content">
-        <div className="projects__header">
+        <div className="projects__header spawn-item" data-spawn data-spawn-direction="left">
           <h2 className="projects__title">{t("projects.title")}</h2>
           <p className="projects__subtitle">
             {t("projects.subtitle")}
           </p>
         </div>
         <div className="projects__grid">
-          <article className="projects__card">
+          <article className="projects__card spawn-item" data-spawn data-spawn-direction="left">
             <div className="projects__media">
               <img
                 src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cd/6f/e9/cd6fe91f-bc75-8cb7-13ce-8fae5536c160/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/200x200ia-75.webp"
@@ -45,7 +45,12 @@ const Projects = () => {
               />
             </div>
           </article>
-          <article className="projects__card">
+          <article
+            className="projects__card spawn-item"
+            data-spawn
+            data-spawn-direction="left"
+            data-spawn-delay="120"
+          >
             <div className="projects__media">
               <img
                 src="https://georiscoimages.s3.us-east-1.amazonaws.com/images/logos/logo_verde_transparente-30.svg"
@@ -71,7 +76,12 @@ const Projects = () => {
               label={t("projects.visitProject")}
             />
           </article>
-          <article className="projects__card">
+          <article
+            className="projects__card spawn-item"
+            data-spawn
+            data-spawn-direction="left"
+            data-spawn-delay="240"
+          >
             <div className="projects__media">
               <img
                 src="https://ipoolcare.com/wp-content/uploads/2024/05/logo.png"

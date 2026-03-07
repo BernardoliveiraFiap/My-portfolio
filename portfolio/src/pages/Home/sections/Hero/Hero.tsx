@@ -10,10 +10,10 @@ const Hero = () => {
 
   return (
     <section className="hero" id="top">
-      <div className="hero__content">
-        <div className="hero__language-float">
-          <LanguageSwitcher />
-        </div>
+      <div className="hero__language-float">
+        <LanguageSwitcher />
+      </div>
+      <div className="hero__content spawn-item" data-spawn data-spawn-direction="left">
         <div className="hero__headline">
           <div className="hero__topbar">
             <div className="hero__identity">
@@ -32,11 +32,17 @@ const Hero = () => {
                 rel="noreferrer"
                 aria-label={t("hero.linkedinLabel")}
               >
-                <img
+                <svg
                   className="hero__linkedin-icon"
-                  src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAABDUlEQVR4AWP4////gOLB44D6nTcsGIo33QHi/zTGd0B2YTiAPpYjHIHNAf/piQk6wGPW8f/rLz8HYRCbXg5AWI4GQGJ0cwDY12gAJDbcHUA4CkZAIqQUK7Ts/m/SfxBMs5RupswBaACr+P47b/5zlG/5DyzZ/r/+8hNF7vuvP//nn3r0X6JhJ+0ccPrR+/+H7735jw9cf/n5v0D1Nuo5gBxQve06zR0AjoL7b7/+//zjN4bc+ScfaOeA33///k9Yfg4mDw7u/Xdeo6uhnQP6D93FMNxlxjF0ZbRzgMXEQ9iyI90cALIMJoccDXRzAK6CZog6YNQBow6gIx54Bwx4x2RAu2bAysoEZu9o7xgAQrvkxt3WZi0AAAAASUVORK5CYII="
-                  alt={t("hero.linkedinLabel")}
-                />
+                  viewBox="0 0 24 24"
+                  aria-hidden="true"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    fill="currentColor"
+                    d="M6.94 8.5a1.56 1.56 0 1 1 0-3.12a1.56 1.56 0 0 1 0 3.12ZM5.6 9.68h2.67v8.72H5.6V9.68Zm4.34 0h2.56v1.19h.04c.36-.68 1.23-1.4 2.53-1.4c2.7 0 3.2 1.77 3.2 4.08v4.85h-2.67V14.1c0-1.03-.02-2.35-1.43-2.35c-1.43 0-1.65 1.12-1.65 2.28v4.37H9.94V9.68Z"
+                  />
+                </svg>
               </a>
             </div>
           </div>
@@ -46,11 +52,16 @@ const Hero = () => {
               type="button"
               onClick={() => generateCurriculoPdf(language)}
             >
-              <img
+              <svg
                 className="hero__button-icon"
-                src="data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A//www.w3.org/2000/svg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27white%27%20stroke-width%3D%272%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Cpath%20d%3D%27M21%2015v4a2%202%200%200%201-2%202H5a2%202%200%200%201-2-2v-4%27/%3E%3Cpath%20d%3D%27M7%2010l5%205%205-5%27/%3E%3Cpath%20d%3D%27M12%2015V3%27/%3E%3C/svg%3E"
-                alt={t("hero.downloadIconAlt")}
-              />
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M7 10l5 5l5-5" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M12 15V3" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
               {t("hero.downloadResume")}
             </button>
             <a
@@ -59,11 +70,15 @@ const Hero = () => {
               target="_blank"
               rel="noreferrer"
             >
-              <img
+              <svg
                 className="hero__button-icon"
-                src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABwAAAAcCAMAAABF0y+mAAAAUVBMVEVHcEz////////////////////////////////////////////////r+u/Z9uL1/fhe24gAzUkf02Sh6LZ+4Z1t3pHG8dMC0Viw7MKQ5apL2HsasPsVAAAADXRSTlMANIfD7f8zYGIW4N4+qsA5tgAAAQdJREFUeAF9k4UWgzAMRYM8vG6j//+hKyfQ+S6WEq9QpWm7Hui7dqB3xh6VfnpRzQteWGeqbPhg+6Or2hkVIVWVOfIKRmpTsA7MQoUJjDchCiVdSpJ/jEXZs6iTrFYs9UQD/3FG4MIn/jbUsmBukNXX7jhoqcPBLR2BPVBHhe5MGcKhDGAE5+iJh3kHoolg1FnSqdRFiZAEIJ6VHHbPKOR0iyYISKM4LBcUeehNskbCZy7oasV6LsX5CHEmb6k5lQ4XymoWBuKkwkjpFGdImXX9sUG47WSS0bvz1uxgJiosALyPCtHnrNm/sL4u9ivz/23yf4Mx84oXlpmemZ439UjvDNdxaOjiDkjvFKpa/ei0AAAAAElFTkSuQmCC"
-                alt={t("hero.whatsappIconAlt")}
-              />
+                viewBox="0 0 24 24"
+                aria-hidden="true"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path d="M12 20c4.42 0 8-3.36 8-7.5S16.42 5 12 5s-8 3.36-8 7.5c0 1.45.44 2.81 1.2 3.95L4.6 19.2l2.86-.55C8.7 19.49 10.27 20 12 20Z" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
+                <path d="M9.6 10.2c.35 1.9 1.8 3.4 3.7 3.85l.9-.9c.25-.25.64-.33.96-.2l1.29.52c.45.18.69.67.57 1.14c-.19.74-.87 1.29-1.65 1.29c-3.46 0-6.27-2.81-6.27-6.27c0-.78.55-1.46 1.29-1.65c.47-.12.96.12 1.14.57l.52 1.29c.13.32.05.71-.2.96l-.9.9" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
+              </svg>
               {t("hero.hireMe")}
             </a>
             <a
@@ -87,7 +102,12 @@ const Hero = () => {
           {t("hero.subtitleSecondary")}
         </p>
       </div>
-      <div className="hero__image-wrap">
+      <div
+        className="hero__image-wrap spawn-item"
+        data-spawn
+        data-spawn-direction="left"
+        data-spawn-delay="120"
+      >
         <img
           className="hero__image"
           src={matrixImage}
