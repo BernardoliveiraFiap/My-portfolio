@@ -1,0 +1,99 @@
+.section-arrows {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+
+.section-arrows__button {
+  width: 38px;
+  height: 38px;
+  border-radius: 999px;
+  border: 1px solid rgba(194, 107, 27, 0.75);
+  background: rgba(0, 0, 0, 0.45);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.08);
+  color: rgba(255, 255, 255, 0.96);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 180ms ease, border-color 180ms ease, background 180ms ease, box-shadow 180ms ease;
+  padding: 0;
+  position: relative;
+}
+
+.section-arrows__button svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.section-arrows__button::after {
+  content: attr(data-tooltip);
+  position: absolute;
+  left: 50%;
+  bottom: calc(100% + 9px);
+  transform: translateX(-50%) translateY(6px);
+  opacity: 0;
+  pointer-events: none;
+  white-space: nowrap;
+  padding: 0.32rem 0.55rem;
+  border-radius: 8px;
+  border: 1px solid rgba(194, 107, 27, 0.7);
+  background: rgba(8, 8, 8, 0.96);
+  color: rgba(255, 255, 255, 0.93);
+  font-size: 0.72rem;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.4);
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 20;
+}
+
+.section-arrows__button:hover,
+.section-arrows__button:focus-visible {
+  border-color: rgba(194, 107, 27, 1);
+  background: rgba(194, 107, 27, 0.25);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.35);
+  transform: translateY(-1px);
+}
+
+.section-arrows__button:hover::after,
+.section-arrows__button:focus-visible::after {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+@media (min-width: 1024px) {
+  .section-arrows {
+    gap: 0.55rem;
+  }
+
+  .section-arrows__button {
+    width: 42px;
+    height: 42px;
+  }
+
+  .section-arrows__button svg {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 700px) {
+  .section-arrows {
+    gap: 0.3rem;
+  }
+
+  .section-arrows__button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .section-arrows__button svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .section-arrows__button::after {
+    display: none;
+  }
+}

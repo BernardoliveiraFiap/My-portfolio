@@ -2,6 +2,7 @@ const pt = {
   header: {
     brandFirst: "Enzo",
     brandLast: "Bernardo",
+    logoAlt: "Logo EB",
     navLabel: "Navegação principal",
     languageLabel: "Idioma",
   },
@@ -12,6 +13,12 @@ const pt = {
     projects: "Projetos",
     certifications: "Certificações",
     contact: "Contato",
+  },
+  sectionArrows: {
+    navLabel: "Navegação por seção",
+    goTo: "Ir para {{section}}",
+    previousTo: "Voltar para {{section}}",
+    nextTo: "Avançar para {{section}}",
   },
   hero: {
     avatarAlt: "Foto de Enzo Bernardo",
@@ -53,10 +60,11 @@ const pt = {
     georiscoWebAlt: "Logo do GEORISCO Web",
     ipoolAlt: "Logo do iPool Care",
     georiscoMobileDescription:
-      "Frontend e AWS do app criado do zero por mim para monitoramento e gestão de risco geológico no metrô de São Paulo, com distribuição nas lojas e foco em performance.",
+      "Aplicativo desenvolvido do zero para monitoramento e gestão de risco geológico, com frontend mobile completo, integração com APIs e serviços AWS, automação de build/release e publicação na App Store e Google Play para operação em contexto crítico (Linha 6 do Metrô de São Paulo).",
     georiscoWebDescription:
-      "Plataforma web completa, código reaproveitado do mobile first. Além disso, colaborei na criação do CMS no front-end, back-end e cloud.",
-    ipoolDescription: "Prestador de serviços de TI.",
+      "Plataforma web completa evoluída da estratégia mobile-first, com reaproveitamento de código e colaboração ponta a ponta em frontend, backend, cloud e estrutura de CMS, mantendo foco em escalabilidade, segurança e evolução contínua do produto.",
+    ipoolDescription:
+      "Atuação em manutenção, evolução e suporte técnico de soluções de TI sob demanda, com melhorias funcionais e técnicas voltadas para estabilidade, performance e experiência do usuário.",
     googlePlay: "Google Play",
     appStore: "App Store",
     visitProject: "Visitar projeto",

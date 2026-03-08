@@ -1,4 +1,5 @@
 import "../../../../css/Certifications.css";
+import SectionArrows from "../../../../components/SectionArrows/SectionArrows";
 import useI18n from "../../../../hooks/useI18n";
 
 const Certifications = () => {
@@ -8,7 +9,10 @@ const Certifications = () => {
     <section className="certifications" id="certifications">
       <div className="certifications__content">
         <div className="spawn-item" data-spawn data-spawn-direction="left">
-          <h2 className="certifications__title">{t("certifications.title")}</h2>
+          <div className="section-title-row">
+            <h2 className="certifications__title">{t("certifications.title")}</h2>
+            <SectionArrows sectionId="certifications" />
+          </div>
           <p className="certifications__subtitle">
             {t("certifications.subtitle")}
           </p>

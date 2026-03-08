@@ -2,6 +2,7 @@ const en = {
   header: {
     brandFirst: "Enzo",
     brandLast: "Bernardo",
+    logoAlt: "EB logo",
     navLabel: "Primary navigation",
     languageLabel: "Language",
   },
@@ -12,6 +13,12 @@ const en = {
     projects: "Projects",
     certifications: "Certifications",
     contact: "Contact",
+  },
+  sectionArrows: {
+    navLabel: "Section navigation",
+    goTo: "Go to {{section}}",
+    previousTo: "Back to {{section}}",
+    nextTo: "Next: {{section}}",
   },
   hero: {
     avatarAlt: "Photo of Enzo Bernardo",
@@ -53,10 +60,11 @@ const en = {
     georiscoWebAlt: "GEORISCO Web logo",
     ipoolAlt: "iPool Care logo",
     georiscoMobileDescription:
-      "Frontend and AWS for the app built from scratch by me to monitor and manage geological risk in the Sao Paulo subway, with store distribution and a focus on performance.",
+      "App built from scratch for geological risk monitoring and management, with full mobile frontend ownership, API and AWS integrations, automated build/release pipeline, and official App Store and Google Play publication for a critical infrastructure context (Sao Paulo Metro Line 6).",
     georiscoWebDescription:
-      "Complete web platform, code reused from the mobile-first app. I also collaborated on the CMS in the front-end, back-end, and cloud.",
-    ipoolDescription: "IT services provider.",
+      "Complete web platform evolved from a mobile-first strategy, with code reuse and end-to-end collaboration across frontend, backend, cloud, and CMS structure, focused on scalability, security, and continuous product evolution.",
+    ipoolDescription:
+      "IT services work focused on maintenance, evolution, and technical support for on-demand solutions, delivering functional and technical improvements aimed at stability, performance, and user experience.",
     googlePlay: "Google Play",
     appStore: "App Store",
     visitProject: "Visit project",

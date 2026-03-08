@@ -1,7 +1,11 @@
 import { sections } from "../../data/sections";
-import { handleSectionLink } from "../../utils/scrollToSection";
+import { handleSectionLink, type ScrollAlign } from "../../utils/scrollToSection";
 import useI18n from "../../hooks/useI18n";
+import ebLogo from "../../assets/eb.png";
 import "../../css/Header.css";
+
+const getSectionBlock = (id: string): ScrollAlign =>
+  id === "top" || id === "contato" || id === "projects" ? "start" : "center";
 
 const Header = () => {
   const { t } = useI18n();
@@ -12,11 +16,14 @@ const Header = () => {
         <a
           className="site-header__brand"
           href="#top"
-          onClick={(event) => handleSectionLink(event, "top", "center")}
+          onClick={(event) => handleSectionLink(event, "top", "start")}
         >
-          {t("header.brandFirst")} {" "}
-          <span className="site-header__brand-accent">
-            {t("header.brandLast")}
+          <img className="site-header__brand-logo" src={ebLogo} alt={t("header.logoAlt")} />
+          <span className="site-header__brand-text">
+            {t("header.brandFirst")}{" "}
+            <span className="site-header__brand-accent">
+              {t("header.brandLast")}
+            </span>
           </span>
         </a>
         <nav className="site-header__nav" aria-label={t("header.navLabel")}>
@@ -28,7 +35,7 @@ const Header = () => {
                 handleSectionLink(
                   event,
                   section.id,
-                  section.id === "contato" ? "start" : "center"
+                  getSectionBlock(section.id)
                 )
               }
             >

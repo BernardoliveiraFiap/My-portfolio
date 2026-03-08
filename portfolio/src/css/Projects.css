@@ -17,6 +17,17 @@
   flex-wrap: wrap;
 }
 
+.projects__header .section-title-row {
+  display: inline-flex;
+  width: auto;
+  max-width: 100%;
+  justify-content: flex-start;
+}
+
+.projects__header .projects__title {
+  flex: 0 0 auto;
+}
+
 .projects__title {
   font-size: clamp(2rem, 3.4vw, 3rem);
   text-transform: uppercase;
@@ -39,7 +50,7 @@
 .projects__grid {
   margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
   gap: 1.6rem;
 }
 
@@ -165,15 +176,32 @@
   .projects {
     padding: 6rem 6vw;
   }
+
+  .projects__header {
+    display: block;
+  }
+
+  .projects__subtitle {
+    margin-top: 0.7rem;
+  }
 }
 
 @media (max-width: 520px) {
+  .projects__content {
+    width: 100%;
+  }
+
   .projects__grid {
     grid-template-columns: 1fr;
+    gap: 1.1rem;
   }
 
   .projects__media {
     height: 150px;
+  }
+
+  .projects__card {
+    padding: 1.2rem 1rem 1.35rem;
   }
 
   .projects__tags span {
