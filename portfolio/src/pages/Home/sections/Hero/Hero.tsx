@@ -4,11 +4,74 @@ import { handleSectionLink } from "../../../../utils/scrollToSection";
 import { generateCurriculoPdf } from "../../../../utils/curriculo";
 import useI18n from "../../../../hooks/useI18n";
 import LanguageSwitcher from "../../../../components/LanguageSwitcher/LanguageSwitcher";
+import { useEffect, useState } from "react";
 
 const Hero = () => {
   const { t, language } = useI18n();
   const subtitlePrimary = t("hero.subtitlePrimary");
   const subtitleSecondary = t("hero.subtitleSecondary");
+  const [primaryCharsVisible, setPrimaryCharsVisible] = useState(0);
+  const [secondaryCharsVisible, setSecondaryCharsVisible] = useState(0);
+
+  useEffect(() => {
+    const primaryDelayMs = 60;
+    const secondaryDelayMs = 12;
+    const loopPauseMs = 10000;
+
+    let timeoutId: ReturnType<typeof setTimeout> | undefined;
+    let isCancelled = false;
+
+    const typePrimary = (nextLength: number) => {
+      timeoutId = setTimeout(() => {
+        if (isCancelled) return;
+        setPrimaryCharsVisible(nextLength);
+
+        if (nextLength < subtitlePrimary.length) {
+          typePrimary(nextLength + 1);
+          return;
+        }
+
+        typeSecondary(1);
+      }, primaryDelayMs);
+    };
+
+    const typeSecondary = (nextLength: number) => {
+      timeoutId = setTimeout(() => {
+        if (isCancelled) return;
+        setSecondaryCharsVisible(nextLength);
+
+        if (nextLength < subtitleSecondary.length) {
+          typeSecondary(nextLength + 1);
+          return;
+        }
+
+        timeoutId = setTimeout(() => {
+          if (isCancelled) return;
+          setPrimaryCharsVisible(0);
+          setSecondaryCharsVisible(0);
+          typePrimary(1);
+        }, loopPauseMs);
+      }, secondaryDelayMs);
+    };
+
+    timeoutId = setTimeout(() => {
+      if (isCancelled) return;
+      setPrimaryCharsVisible(0);
+      setSecondaryCharsVisible(0);
+      typePrimary(1);
+    }, 0);
+
+    return () => {
+      isCancelled = true;
+      if (timeoutId) clearTimeout(timeoutId);
+    };
+  }, [subtitlePrimary, subtitleSecondary]);
+
+  const typedPrimary = subtitlePrimary.slice(0, primaryCharsVisible);
+  const typedSecondary = subtitleSecondary.slice(0, secondaryCharsVisible);
+  const showPrimaryCursor =
+    secondaryCharsVisible === 0 && primaryCharsVisible < subtitlePrimary.length;
+  const showSecondaryCursor = !showPrimaryCursor;
 
   return (
     <section className="hero" id="top">
@@ -101,11 +164,23 @@ const Hero = () => {
         </div>
         <p className="hero__subtitle hero__subtitle--type hero__subtitle--type-primary" aria-label={subtitlePrimary}>
           <span className="hero__subtitle-ghost" aria-hidden="true">{subtitlePrimary}</span>
-          <span className="hero__subtitle-typing" aria-hidden="true">{subtitlePrimary}</span>
+          <span
+            className={`hero__subtitle-typing${showPrimaryCursor ? " is-cursor-active" : ""}`}
+            aria-hidden="true"
+          >
+            {typedPrimary}
+            {showPrimaryCursor ? <span className="hero__type-cursor">|</span> : null}
+          </span>
         </p>
         <p className="hero__subtitle hero__subtitle--type hero__subtitle--type-secondary" aria-label={subtitleSecondary}>
           <span className="hero__subtitle-ghost" aria-hidden="true">{subtitleSecondary}</span>
-          <span className="hero__subtitle-typing" aria-hidden="true">{subtitleSecondary}</span>
+          <span
+            className={`hero__subtitle-typing${showSecondaryCursor ? " is-cursor-active" : ""}`}
+            aria-hidden="true"
+          >
+            {typedSecondary}
+            {showSecondaryCursor ? <span className="hero__type-cursor">|</span> : null}
+          </span>
         </p>
       </div>
       <div
