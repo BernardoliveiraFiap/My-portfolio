@@ -13,7 +13,7 @@ const Footer = () => {
         <a
           className="site-footer__to-top"
           href="#top"
-          onClick={(event) => handleSectionLink(event, "top", "center")}
+          onClick={(event) => handleSectionLink(event, "top", "start")}
         >
           {t("footer.backToTop")}
         </a>

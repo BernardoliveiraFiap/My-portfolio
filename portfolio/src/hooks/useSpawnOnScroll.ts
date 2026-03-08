@@ -108,13 +108,34 @@ const useSpawnOnScroll = () => {
       animationTimeouts.length = 0;
     };
 
+    const sectionItemsMap = new Map<HTMLElement, HTMLElement[]>();
+
+    sectionGroups.forEach((section) => {
+      const sectionItems = Array.from(
+        section.querySelectorAll<HTMLElement>("[data-spawn]")
+      );
+
+      if (sectionItems.length) {
+        sectionItemsMap.set(section, sectionItems);
+      }
+    });
+
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
+          const section = entry.target as HTMLElement;
+          const sectionItems = sectionItemsMap.get(section);
+
+          if (!sectionItems?.length) {
+            return;
+          }
+
           if (entry.isIntersecting) {
-            entry.target.classList.add("is-spawn-visible");
+            sectionItems.forEach((item) => item.classList.add("is-spawn-visible"));
           } else {
-            entry.target.classList.remove("is-spawn-visible");
+            sectionItems.forEach((item) =>
+              item.classList.remove("is-spawn-visible")
+            );
           }
         });
       },
@@ -124,7 +145,7 @@ const useSpawnOnScroll = () => {
       }
     );
 
-    elements.forEach((element) => observer.observe(element));
+    sectionItemsMap.forEach((_, section) => observer.observe(section));
 
     const replaySectionSpawn = (sectionId?: string) => {
       const id = sectionId ?? window.location.hash.slice(1);
@@ -147,13 +168,11 @@ const useSpawnOnScroll = () => {
         item.classList.remove("is-spawn-visible");
       });
 
-      sectionItems.forEach((item, index) => {
-        const timeoutId = window.setTimeout(() => {
-          item.classList.add("is-spawn-visible");
-        }, index * 70 + 180);
+      const timeoutId = window.setTimeout(() => {
+        sectionItems.forEach((item) => item.classList.add("is-spawn-visible"));
+      }, 180);
 
-        animationTimeouts.push(timeoutId);
-      });
+      animationTimeouts.push(timeoutId);
     };
 
     const handleSectionNavigate = (event: Event) => {

@@ -1,4 +1,5 @@
 import "../../../../css/Projects.css";
+import SectionArrows from "../../../../components/SectionArrows/SectionArrows";
 import ProjectButton from "../../../../components/ProjectButton/ProjectButton";
 import useI18n from "../../../../hooks/useI18n";
 
@@ -9,7 +10,10 @@ const Projects = () => {
     <section className="projects" id="projects">
       <div className="projects__content">
         <div className="projects__header spawn-item" data-spawn data-spawn-direction="left">
-          <h2 className="projects__title">{t("projects.title")}</h2>
+          <div className="section-title-row">
+            <h2 className="projects__title">{t("projects.title")}</h2>
+            <SectionArrows sectionId="projects" />
+          </div>
           <p className="projects__subtitle">
             {t("projects.subtitle")}
           </p>

@@ -1,4 +1,5 @@
 import "../../../../css/Contact.css";
+import SectionArrows from "../../../../components/SectionArrows/SectionArrows";
 import useI18n from "../../../../hooks/useI18n";
 
 const Contact = () => {
@@ -8,7 +9,10 @@ const Contact = () => {
     <section className="contact" id="contato">
       <div className="contact__content">
         <div className="contact__header spawn-item" data-spawn data-spawn-direction="left">
-          <h2 className="contact__title">{t("contact.title")}</h2>
+          <div className="section-title-row">
+            <h2 className="contact__title">{t("contact.title")}</h2>
+            <SectionArrows sectionId="contato" />
+          </div>
           <p className="contact__subtitle">{t("contact.subtitle")}</p>
         </div>
 

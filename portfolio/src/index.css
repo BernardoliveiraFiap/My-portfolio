@@ -10,6 +10,7 @@ html, body {
   width: 100%;
   min-height: 100%;
   scroll-behavior: smooth;
+  overflow-x: clip;
 }
 
 body {
@@ -44,6 +45,20 @@ img {
 section,
 footer {
   scroll-margin-top: 120px;
+}
+
+.section-title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  flex-wrap: nowrap;
+  max-width: 100%;
+}
+
+@media (max-width: 1023px) {
+  .section-title-row {
+    gap: 0.45rem;
+  }
 }
 
 button {

@@ -1,4 +1,5 @@
 import "../../../../css/Skills.css";
+import SectionArrows from "../../../../components/SectionArrows/SectionArrows";
 import useI18n from "../../../../hooks/useI18n";
 
 const hardSkillLogos = [
@@ -36,7 +37,10 @@ const Skills = () => {
     <>
       <section className="skills" id="hard-skills">
         <div className="skills__content spawn-item" data-spawn data-spawn-direction="left">
-          <h2 className="skills__title">{t("skills.hardTitle")}</h2>
+          <div className="section-title-row">
+            <h2 className="skills__title">{t("skills.hardTitle")}</h2>
+            <SectionArrows sectionId="hard-skills" />
+          </div>
           <p className="skills__subtitle">
             {t("skills.hardSubtitle")}
           </p>
@@ -67,7 +71,10 @@ const Skills = () => {
           data-spawn-direction="left"
           data-spawn-delay="90"
         >
-          <h2 className="skills__title">{t("skills.softTitle")}</h2>
+          <div className="section-title-row">
+            <h2 className="skills__title">{t("skills.softTitle")}</h2>
+            <SectionArrows sectionId="soft-skills" />
+          </div>
           <p className="skills__subtitle">
             {t("skills.softSubtitle")}
           </p>

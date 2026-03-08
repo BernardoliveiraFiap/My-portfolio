@@ -7,6 +7,8 @@ import LanguageSwitcher from "../../../../components/LanguageSwitcher/LanguageSw
 
 const Hero = () => {
   const { t, language } = useI18n();
+  const subtitlePrimary = t("hero.subtitlePrimary");
+  const subtitleSecondary = t("hero.subtitleSecondary");
 
   return (
     <section className="hero" id="top">
@@ -91,15 +93,19 @@ const Hero = () => {
             <a
               className="hero__button"
               href="#projects"
-              onClick={(event) => handleSectionLink(event, "projects", "center")}
+              onClick={(event) => handleSectionLink(event, "projects", "start")}
             >
               {t("hero.viewProjects")}
             </a>
           </div>
         </div>
-        <p className="hero__subtitle">{t("hero.subtitlePrimary")}</p>
-        <p className="hero__subtitle">
-          {t("hero.subtitleSecondary")}
+        <p className="hero__subtitle hero__subtitle--type hero__subtitle--type-primary" aria-label={subtitlePrimary}>
+          <span className="hero__subtitle-ghost" aria-hidden="true">{subtitlePrimary}</span>
+          <span className="hero__subtitle-typing" aria-hidden="true">{subtitlePrimary}</span>
+        </p>
+        <p className="hero__subtitle hero__subtitle--type hero__subtitle--type-secondary" aria-label={subtitleSecondary}>
+          <span className="hero__subtitle-ghost" aria-hidden="true">{subtitleSecondary}</span>
+          <span className="hero__subtitle-typing" aria-hidden="true">{subtitleSecondary}</span>
         </p>
       </div>
       <div
