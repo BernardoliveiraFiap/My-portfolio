@@ -1,5 +1,6 @@
 import "../../../../css/Hero.css";
 import matrixImage from "../../../../assets/matrix.png";
+import avatarImage from "../../../../assets/file.png";
 import { handleSectionLink } from "../../../../utils/scrollToSection";
 import { generateCurriculoPdf } from "../../../../utils/curriculo";
 import useI18n from "../../../../hooks/useI18n";
@@ -84,7 +85,7 @@ const Hero = () => {
             <div className="hero__identity">
               <img
                 className="hero__avatar"
-                src="https://media.licdn.com/dms/image/v2/D4D03AQGIYn3g7fMYfQ/profile-displayphoto-scale_400_400/B4DZyC9unrJEAg-/0/1771723748715?e=1773273600&v=beta&t=LidKB1LM3u5KaiizdGpE2mdlnwQz4n44JL6zwesHuhM"
+                src={avatarImage}
                 alt={t("hero.avatarAlt")}
               />
               <h1 className="hero__title">
