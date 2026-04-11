@@ -40,7 +40,7 @@
 .education__grid {
   margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 330px), 1fr));
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 1.6rem;
 }
 
@@ -178,6 +178,14 @@
   .education {
     padding: 6rem 6vw;
     align-items: flex-start;
+  }
+
+  .education__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .education__media {
+    height: 196px;
   }
 }
 

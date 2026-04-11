@@ -3,9 +3,8 @@ import SectionArrows from "../../../../components/SectionArrows/SectionArrows";
 import ProjectButton from "../../../../components/ProjectButton/ProjectButton";
 import useI18n from "../../../../hooks/useI18n";
 import type { PointerEvent } from "react";
-
-const georiscoProjectImage =
-  "https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cd/6f/e9/cd6fe91f-bc75-8cb7-13ce-8fae5536c160/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/200x200ia-75.webp";
+import georiscoWebImage from "../../../../assets/georisco-web.png";
+import georiscoMobileImage from "../../../../assets/georisco-mobile.png";
 
 const handleMediaPointerMove = (event: PointerEvent<HTMLDivElement>) => {
   const media = event.currentTarget;
@@ -59,7 +58,7 @@ const Projects = () => {
                 </div>
                 <img
                   className="projects__media-image"
-                  src={georiscoProjectImage}
+                  src={georiscoMobileImage}
                   alt={t("projects.georiscoMobileAlt")}
                 />
               </div>
@@ -106,7 +105,7 @@ const Projects = () => {
                 </div>
                 <img
                   className="projects__media-image"
-                  src={georiscoProjectImage}
+                  src={georiscoWebImage}
                   alt={t("projects.georiscoWebAlt")}
                 />
               </div>

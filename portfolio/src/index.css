@@ -68,6 +68,13 @@ footer {
   }
 }
 
+@media (max-width: 960px) {
+  .section-title-row {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
 button {
   background: #c26b1b;
   color: #fff;

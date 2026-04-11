@@ -53,7 +53,7 @@
 .projects__grid {
   margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.6rem;
 }
 
@@ -254,6 +254,36 @@
   margin-top: auto;
 }
 
+@media (max-width: 1280px) {
+  .projects {
+    padding-inline: 4.5vw;
+  }
+
+  .projects__card {
+    padding: 1.35rem 1.2rem 1.5rem;
+  }
+
+  .projects__name {
+    font-size: 1.26rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__media {
+    height: 182px;
+  }
+}
+
 @media (max-width: 700px) {
   .projects {
     padding: 6rem 6vw;
@@ -266,6 +296,7 @@
 
   .projects__subtitle {
     margin-top: 0.7rem;
+    max-width: none;
   }
 }
 
