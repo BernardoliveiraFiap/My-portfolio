@@ -85,10 +85,6 @@ const Hero = ({ themeMode, onThemeModeChange }: HeroProps) => {
 
   return (
     <section className={heroClassName} id="top">
-      <div className="hero__language-float">
-        <LanguageSwitcher />
-        <ThemeToggle themeMode={themeMode} onThemeModeChange={onThemeModeChange} />
-      </div>
       <div className="hero__content spawn-item" data-spawn data-spawn-direction="left">
         <div className="hero__headline">
           <div className="hero__topbar">
@@ -120,6 +116,10 @@ const Hero = ({ themeMode, onThemeModeChange }: HeroProps) => {
                   />
                 </svg>
               </a>
+            </div>
+            <div className="hero__language-float">
+              <LanguageSwitcher />
+              <ThemeToggle themeMode={themeMode} onThemeModeChange={onThemeModeChange} />
             </div>
           </div>
           <div className="hero__actions">
