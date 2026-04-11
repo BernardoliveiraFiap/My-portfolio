@@ -1,13 +1,23 @@
 .certifications {
-  padding: 8rem 6vw;
+  padding: clamp(6.5rem, 10vh, 8.5rem) 6vw;
   min-height: 80vh;
   background: #000;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .certifications__content {
   width: min(1100px, 100%);
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.certifications .section-title-row {
+  justify-content: center;
 }
 
 .certifications__title {
@@ -26,6 +36,7 @@
   color: rgba(255, 255, 255, 0.78);
   line-height: 1.6;
   font-size: 1.1rem;
+  max-width: 760px;
 }
 
 .certifications__grid {
@@ -33,6 +44,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
   gap: 1.6rem;
+  width: min(980px, 100%);
 }
 
 .certifications__card {
@@ -73,14 +85,15 @@
 @media (max-width: 700px) {
   .certifications {
     padding: 6rem 6vw;
+    align-items: flex-start;
   }
 
   .certifications .section-title-row {
-    width: 100%;
-    justify-content: space-between;
-    align-items: flex-start;
+    width: auto;
+    justify-content: center;
+    align-items: center;
     gap: 0.6rem;
-    flex-wrap: nowrap;
+    flex-wrap: wrap;
   }
 
   .certifications__title {

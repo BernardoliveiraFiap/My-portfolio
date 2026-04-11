@@ -2,6 +2,31 @@ import "../../../../css/Projects.css";
 import SectionArrows from "../../../../components/SectionArrows/SectionArrows";
 import ProjectButton from "../../../../components/ProjectButton/ProjectButton";
 import useI18n from "../../../../hooks/useI18n";
+import type { PointerEvent } from "react";
+import georiscoWebImage from "../../../../assets/georisco-web.png";
+import georiscoMobileImage from "../../../../assets/georisco-mobile.png";
+
+const handleMediaPointerMove = (event: PointerEvent<HTMLDivElement>) => {
+  const media = event.currentTarget;
+  const bounds = media.getBoundingClientRect();
+  const x = (event.clientX - bounds.left) / bounds.width;
+  const y = (event.clientY - bounds.top) / bounds.height;
+  const rotateY = (x - 0.5) * 9;
+  const rotateX = (0.5 - y) * 7;
+
+  media.style.setProperty("--media-rotate-x", `${rotateX.toFixed(2)}deg`);
+  media.style.setProperty("--media-rotate-y", `${rotateY.toFixed(2)}deg`);
+  media.style.setProperty("--media-glow-x", `${(x * 100).toFixed(2)}%`);
+  media.style.setProperty("--media-glow-y", `${(y * 100).toFixed(2)}%`);
+};
+
+const resetMediaPointer = (event: PointerEvent<HTMLDivElement>) => {
+  const media = event.currentTarget;
+  media.style.setProperty("--media-rotate-x", "0deg");
+  media.style.setProperty("--media-rotate-y", "0deg");
+  media.style.setProperty("--media-glow-x", "50%");
+  media.style.setProperty("--media-glow-y", "50%");
+};
 
 const Projects = () => {
   const { t } = useI18n();
@@ -20,11 +45,23 @@ const Projects = () => {
         </div>
         <div className="projects__grid">
           <article className="projects__card spawn-item" data-spawn data-spawn-direction="left">
-            <div className="projects__media">
-              <img
-                src="https://is1-ssl.mzstatic.com/image/thumb/Purple211/v4/cd/6f/e9/cd6fe91f-bc75-8cb7-13ce-8fae5536c160/AppIcon-0-0-1x_U007ephone-0-1-85-220.png/200x200ia-75.webp"
-                alt={t("projects.georiscoMobileAlt")}
-              />
+            <div
+              className="projects__media"
+              onPointerMove={handleMediaPointerMove}
+              onPointerLeave={resetMediaPointer}
+            >
+              <div className="projects__media-shell">
+                <div className="projects__media-toolbar" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <img
+                  className="projects__media-image"
+                  src={georiscoMobileImage}
+                  alt={t("projects.georiscoMobileAlt")}
+                />
+              </div>
             </div>
             <div className="projects__eyebrow">{t("projects.mobileEyebrow")}</div>
             <h3 className="projects__name">GEORISCO Mobile</h3>
@@ -55,11 +92,23 @@ const Projects = () => {
             data-spawn-direction="left"
             data-spawn-delay="120"
           >
-            <div className="projects__media">
-              <img
-                src="https://georiscoimages.s3.us-east-1.amazonaws.com/images/logos/logo_verde_transparente-30.svg"
-                alt={t("projects.georiscoWebAlt")}
-              />
+            <div
+              className="projects__media"
+              onPointerMove={handleMediaPointerMove}
+              onPointerLeave={resetMediaPointer}
+            >
+              <div className="projects__media-shell">
+                <div className="projects__media-toolbar" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <img
+                  className="projects__media-image"
+                  src={georiscoWebImage}
+                  alt={t("projects.georiscoWebAlt")}
+                />
+              </div>
             </div>
             <div className="projects__eyebrow">{t("projects.webEyebrow")}</div>
             <h3 className="projects__name">GEORISCO Web</h3>
@@ -86,11 +135,23 @@ const Projects = () => {
             data-spawn-direction="left"
             data-spawn-delay="240"
           >
-            <div className="projects__media">
-              <img
-                src="https://ipoolcare.com/wp-content/uploads/2024/05/logo.png"
-                alt={t("projects.ipoolAlt")}
-              />
+            <div
+              className="projects__media"
+              onPointerMove={handleMediaPointerMove}
+              onPointerLeave={resetMediaPointer}
+            >
+              <div className="projects__media-shell">
+                <div className="projects__media-toolbar" aria-hidden="true">
+                  <span />
+                  <span />
+                  <span />
+                </div>
+                <img
+                  className="projects__media-image"
+                  src="https://ipoolcare.com/wp-content/uploads/2024/05/logo.png"
+                  alt={t("projects.ipoolAlt")}
+                />
+              </div>
             </div>
             
             <h3 className="projects__name">iPool Care</h3>
@@ -99,10 +160,17 @@ const Projects = () => {
             </p>
             <div className="projects__meta">iPool Care</div>
             <div className="projects__tags">
-              
+              <span>React</span>
+              <span>TypeScript</span>
+              <span>Node.js</span>
+              <span>SQL</span>
+              <span>MSSQL</span>
+              <span>Azure</span>
+              <span>C#</span>
+              <span>.NET</span>
             </div>
             <ProjectButton
-              href="https://ipoolcare.com/"
+              href="https://tracker.ipoolcare.com/auth/login"
               label={t("projects.visitProject")}
             />
           </article>

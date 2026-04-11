@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "./css/LightMode.css";
+@import "./css/SectionCloudDividers.css";
 
 * {
   box-sizing: border-box;
@@ -43,6 +45,10 @@ img {
   padding-top: var(--site-header-offset, 0px);
 }
 
+.post-hero {
+  transition: background 220ms ease, color 220ms ease;
+}
+
 section,
 footer {
   scroll-margin-top: 120px;
@@ -59,6 +65,13 @@ footer {
 @media (max-width: 1023px) {
   .section-title-row {
     gap: 0.45rem;
+  }
+}
+
+@media (max-width: 960px) {
+  .section-title-row {
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 

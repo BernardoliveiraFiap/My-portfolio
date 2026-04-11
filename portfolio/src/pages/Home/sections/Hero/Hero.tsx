@@ -5,10 +5,18 @@ import { handleSectionLink } from "../../../../utils/scrollToSection";
 import { generateCurriculoPdf } from "../../../../utils/curriculo";
 import useI18n from "../../../../hooks/useI18n";
 import LanguageSwitcher from "../../../../components/LanguageSwitcher/LanguageSwitcher";
+import ThemeToggle from "../../../../components/ThemeToggle/ThemeToggle";
 import { useEffect, useState } from "react";
+import type { ThemeMode } from "../../../../types/theme";
 
-const Hero = () => {
+type HeroProps = {
+  themeMode: ThemeMode;
+  onThemeModeChange: (nextMode: ThemeMode) => void;
+};
+
+const Hero = ({ themeMode, onThemeModeChange }: HeroProps) => {
   const { t, language } = useI18n();
+  const isLightMode = themeMode === "light";
   const subtitlePrimary = t("hero.subtitlePrimary");
   const subtitleSecondary = t("hero.subtitleSecondary");
   const [primaryCharsVisible, setPrimaryCharsVisible] = useState(0);
@@ -73,11 +81,13 @@ const Hero = () => {
   const showPrimaryCursor =
     secondaryCharsVisible === 0 && primaryCharsVisible < subtitlePrimary.length;
   const showSecondaryCursor = !showPrimaryCursor;
+  const heroClassName = isLightMode ? "hero hero--light" : "hero";
 
   return (
-    <section className="hero" id="top">
+    <section className={heroClassName} id="top">
       <div className="hero__language-float">
         <LanguageSwitcher />
+        <ThemeToggle themeMode={themeMode} onThemeModeChange={onThemeModeChange} />
       </div>
       <div className="hero__content spawn-item" data-spawn data-spawn-direction="left">
         <div className="hero__headline">
@@ -184,41 +194,72 @@ const Hero = () => {
           </span>
         </p>
       </div>
-      <div
-        className="hero__image-wrap spawn-item"
-        data-spawn
-        data-spawn-direction="left"
-        data-spawn-delay="120"
-      >
-        <img
-          className="hero__image"
-          src={matrixImage}
-          alt={t("hero.matrixAlt")}
-        />
-        <p className="hero__prompt hero__prompt--overlay" aria-label={t("hero.prompt")}>
-          <span className="hero__prompt-size" aria-hidden="true">
-            {t("hero.prompt")}
-          </span>
-          <span className="hero__prompt-track" aria-hidden="true">
-            <span className="hero__prompt-item">{t("hero.prompt")}</span>
-            <span className="hero__prompt-item">{t("hero.prompt")}</span>
-          </span>
-        </p>
-        <a
-          className="hero__hotspot hero__hotspot--red"
-          href="#hard-skills"
-          data-label={t("nav.hardSkills")}
-          aria-label={t("hero.hardSkillsLink")}
-          onClick={(event) => handleSectionLink(event, "hard-skills", "center")}
-        />
-        <a
-          className="hero__hotspot hero__hotspot--blue"
-          href="#soft-skills"
-          data-label={t("nav.softSkills")}
-          aria-label={t("hero.softSkillsLink")}
-          onClick={(event) => handleSectionLink(event, "soft-skills", "center")}
-        />
-      </div>
+      {isLightMode ? (
+        <div className="hero__light-panel spawn-item" data-spawn data-spawn-direction="left" data-spawn-delay="120">
+          <span className="hero__light-kicker">{t("hero.lightKicker")}</span>
+          <h2 className="hero__light-title">{t("hero.lightTitle")}</h2>
+          <p className="hero__light-text">{t("hero.lightText")}</p>
+          <div className="hero__light-links">
+            <a
+              className="hero__light-link"
+              href="#hard-skills"
+              onClick={(event) => handleSectionLink(event, "hard-skills", "center")}
+            >
+              {t("nav.hardSkills")}
+            </a>
+            <a
+              className="hero__light-link"
+              href="#soft-skills"
+              onClick={(event) => handleSectionLink(event, "soft-skills", "center")}
+            >
+              {t("nav.softSkills")}
+            </a>
+            <a
+              className="hero__light-link"
+              href="#projects"
+              onClick={(event) => handleSectionLink(event, "projects", "start")}
+            >
+              {t("nav.projects")}
+            </a>
+          </div>
+        </div>
+      ) : (
+        <div
+          className="hero__image-wrap spawn-item"
+          data-spawn
+          data-spawn-direction="left"
+          data-spawn-delay="120"
+        >
+          <img
+            className="hero__image"
+            src={matrixImage}
+            alt={t("hero.matrixAlt")}
+          />
+          <p className="hero__prompt hero__prompt--overlay" aria-label={t("hero.prompt")}>
+            <span className="hero__prompt-size" aria-hidden="true">
+              {t("hero.prompt")}
+            </span>
+            <span className="hero__prompt-track" aria-hidden="true">
+              <span className="hero__prompt-item">{t("hero.prompt")}</span>
+              <span className="hero__prompt-item">{t("hero.prompt")}</span>
+            </span>
+          </p>
+          <a
+            className="hero__hotspot hero__hotspot--red"
+            href="#hard-skills"
+            data-label={t("nav.hardSkills")}
+            aria-label={t("hero.hardSkillsLink")}
+            onClick={(event) => handleSectionLink(event, "hard-skills", "center")}
+          />
+          <a
+            className="hero__hotspot hero__hotspot--blue"
+            href="#soft-skills"
+            data-label={t("nav.softSkills")}
+            aria-label={t("hero.softSkillsLink")}
+            onClick={(event) => handleSectionLink(event, "soft-skills", "center")}
+          />
+        </div>
+      )}
     </section>
   );
 };

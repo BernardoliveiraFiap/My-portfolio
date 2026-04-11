@@ -5,6 +5,9 @@ const pt = {
     logoAlt: "Logo EB",
     navLabel: "Navegação principal",
     languageLabel: "Idioma",
+    themeLabel: "Tema",
+    themeDark: "Dark",
+    themeLight: "White",
   },
   nav: {
     top: "Início",
@@ -12,6 +15,7 @@ const pt = {
     softSkills: "Soft Skills",
     projects: "Projetos",
     certifications: "Certificações",
+    education: "Formações",
     contact: "Contato",
   },
   sectionArrows: {
@@ -36,6 +40,10 @@ const pt = {
     linkedinLabel: "LinkedIn",
     hardSkillsLink: "Ir para a seção de Hard Skills",
     softSkillsLink: "Ir para a seção de Soft Skills",
+    lightKicker: "Portfólio",
+    lightTitle: "Construo, entrego e escalo produtos digitais",
+    lightText:
+      "Experiências reais em web, mobile e cloud com foco em performance, clareza e evolução contínua.",
   },
   footer: {
     title: "Obrigado pela visita",
@@ -62,7 +70,7 @@ const pt = {
     georiscoMobileDescription:
       "Aplicativo desenvolvido do zero para monitoramento e gestão de risco geológico, com frontend mobile completo, integração com APIs e serviços AWS, automação de build/release e publicação na App Store e Google Play para operação em contexto crítico (Linha 6 do Metrô de São Paulo).",
     georiscoWebDescription:
-      "Plataforma web completa evoluída da estratégia mobile-first, com reaproveitamento de código e colaboração ponta a ponta em frontend, backend, cloud e estrutura de CMS, mantendo foco em escalabilidade, segurança e evolução contínua do produto.",
+      "Plataforma web completa evoluída da estratégia mobile-first, com reaproveitamento de código e colaboração ponta a ponta em frontend, backend, cloud e estrutura de Backoffice, mantendo foco em escalabilidade, segurança e evolução contínua do produto.",
     ipoolDescription:
       "Atuação em manutenção, evolução e suporte técnico de soluções de TI sob demanda, com melhorias funcionais e técnicas voltadas para estabilidade, performance e experiência do usuário.",
     googlePlay: "Google Play",
@@ -96,6 +104,39 @@ const pt = {
       "Proatividade para resolver problemas",
       "Aprendizado contínuo e adaptabilidade",
     ],
+  },
+  education: {
+    title: "Formações",
+    subtitle:
+      "Base acadêmica concluída na graduação e especialização em andamento para aprofundar arquitetura, cloud e entrega contínua.",
+    visitCourse: "Ver curso",
+    labels: {
+      institution: "Instituição:",
+      degree: "Nível:",
+      duration: "Duração:",
+    },
+    graduation: {
+      kicker: "Graduação",
+      name: "Análise e Desenvolvimento de Sistemas",
+      institution: "FIAP",
+      degree: "Tecnólogo",
+      duration: "2 anos",
+      status: "Concluída",
+      description:
+        "Formação superior tecnológica com foco em engenharia de software, arquitetura de aplicações, banco de dados e desenvolvimento full stack.",
+      imageAlt: "Imagem institucional da graduação FIAP",
+    },
+    postgraduate: {
+      kicker: "Pós-graduação",
+      name: "DevOps e Arquitetura Cloud",
+      institution: "FIAP + Alura (Pós Tech)",
+      degree: "Especialização",
+      duration: "10 meses",
+      status: "Em andamento",
+      description:
+        "Especialização voltada para cultura DevOps, infraestrutura em nuvem, automação, observabilidade e práticas modernas de engenharia.",
+      imageAlt: "Imagem institucional da Pós Tech FIAP",
+    },
   },
   certifications: {
     title: "Certificações",

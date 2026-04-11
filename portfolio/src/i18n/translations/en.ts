@@ -5,6 +5,9 @@ const en = {
     logoAlt: "EB logo",
     navLabel: "Primary navigation",
     languageLabel: "Language",
+    themeLabel: "Theme",
+    themeDark: "Dark",
+    themeLight: "White",
   },
   nav: {
     top: "Home",
@@ -12,6 +15,7 @@ const en = {
     softSkills: "Soft Skills",
     projects: "Projects",
     certifications: "Certifications",
+    education: "Education",
     contact: "Contact",
   },
   sectionArrows: {
@@ -36,6 +40,10 @@ const en = {
     linkedinLabel: "LinkedIn",
     hardSkillsLink: "Go to the Hard Skills section",
     softSkillsLink: "Go to the Soft Skills section",
+    lightKicker: "Portfolio",
+    lightTitle: "Build, ship, and scale digital products",
+    lightText:
+      "Real-world web, mobile, and cloud experience with focus on performance, clarity, and continuous evolution.",
   },
   footer: {
     title: "Thanks for visiting",
@@ -62,7 +70,7 @@ const en = {
     georiscoMobileDescription:
       "App built from scratch for geological risk monitoring and management, with full mobile frontend ownership, API and AWS integrations, automated build/release pipeline, and official App Store and Google Play publication for a critical infrastructure context (Sao Paulo Metro Line 6).",
     georiscoWebDescription:
-      "Complete web platform evolved from a mobile-first strategy, with code reuse and end-to-end collaboration across frontend, backend, cloud, and CMS structure, focused on scalability, security, and continuous product evolution.",
+      "Complete web platform evolved from a mobile-first strategy, with code reuse and end-to-end collaboration across frontend, backend, cloud, and Backoffice structure, focused on scalability, security, and continuous product evolution.",
     ipoolDescription:
       "IT services work focused on maintenance, evolution, and technical support for on-demand solutions, delivering functional and technical improvements aimed at stability, performance, and user experience.",
     googlePlay: "Google Play",
@@ -96,6 +104,39 @@ const en = {
       "Proactivity in problem solving",
       "Continuous learning and adaptability",
     ],
+  },
+  education: {
+    title: "Education",
+    subtitle:
+      "Academic foundation completed in graduation plus an ongoing specialization to deepen architecture, cloud, and continuous delivery skills.",
+    visitCourse: "View course",
+    labels: {
+      institution: "Institution:",
+      degree: "Level:",
+      duration: "Duration:",
+    },
+    graduation: {
+      kicker: "Graduation",
+      name: "Systems Analysis and Development",
+      institution: "FIAP",
+      degree: "Technology Degree",
+      duration: "2 years",
+      status: "Completed",
+      description:
+        "Higher education focused on software engineering, application architecture, databases, and full stack development.",
+      imageAlt: "FIAP graduation institutional image",
+    },
+    postgraduate: {
+      kicker: "Postgraduate",
+      name: "DevOps and Cloud Architecture",
+      institution: "FIAP + Alura (Pós Tech)",
+      degree: "Specialization",
+      duration: "10 months",
+      status: "In progress",
+      description:
+        "Specialization focused on DevOps culture, cloud infrastructure, automation, observability, and modern engineering practices.",
+      imageAlt: "FIAP Pós Tech institutional image",
+    },
   },
   certifications: {
     title: "Certifications",

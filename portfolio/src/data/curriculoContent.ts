@@ -81,9 +81,10 @@ const resumeByLanguage: Record<string, ResumeContent> = {
         ],
       },
       {
-        title: "Formação",
+        title: "Formações",
         items: [
           "FIAP CST em Análise e Desenvolvimento de Sistemas - concluído 2023-2024 (2 anos).",
+          "FIAP + Alura (Pós Tech) Pós-graduação em DevOps e Arquitetura Cloud - iniciada em 2026 (em andamento).",
         ],
       },
       {
@@ -192,6 +193,7 @@ const resumeByLanguage: Record<string, ResumeContent> = {
         title: "Education",
         items: [
           "FIAP Technology Degree in Systems Analysis and Development - completed 2023-2024 (2 years).",
+          "FIAP + Alura (Pós Tech) Postgraduate Specialization in DevOps and Cloud Architecture - started in 2026 (in progress).",
         ],
       },
       {

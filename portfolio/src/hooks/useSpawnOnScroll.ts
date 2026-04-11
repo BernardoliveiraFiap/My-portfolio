@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useSpawnOnScroll = () => {
+const useSpawnOnScroll = (refreshKey?: string) => {
   useEffect(() => {
     const rightSpawnTextClasses = new Set([
       "skills__title",
@@ -12,6 +12,13 @@ const useSpawnOnScroll = () => {
       "projects__description",
       "certifications__title",
       "certifications__subtitle",
+      "education__title",
+      "education__subtitle",
+      "education__kicker",
+      "education__name",
+      "education__description",
+      "education__meta-label",
+      "education__meta-value",
       "contact__title",
       "contact__subtitle",
       "contact__label",
@@ -40,6 +47,14 @@ const useSpawnOnScroll = () => {
       ".certifications__title",
       ".certifications__subtitle",
       ".certifications__card",
+      ".education__header",
+      ".education__title",
+      ".education__subtitle",
+      ".education__card",
+      ".education__kicker",
+      ".education__name",
+      ".education__description",
+      ".education__meta-item",
       ".contact__header",
       ".contact__title",
       ".contact__subtitle",
@@ -193,7 +208,7 @@ const useSpawnOnScroll = () => {
       window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("section:navigate", handleSectionNavigate as EventListener);
     };
-  }, []);
+  }, [refreshKey]);
 };
 
 export default useSpawnOnScroll;

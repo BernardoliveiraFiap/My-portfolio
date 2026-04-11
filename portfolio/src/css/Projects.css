@@ -1,7 +1,10 @@
 .projects {
-  padding: 8rem 6vw;
+  padding: clamp(6.5rem, 10vh, 8.5rem) 6vw;
+  min-height: 100vh;
   background: #000;
   color: #fff;
+  display: flex;
+  align-items: center;
 }
 
 .projects__content {
@@ -50,7 +53,7 @@
 .projects__grid {
   margin-top: 2.5rem;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 1.6rem;
 }
 
@@ -82,21 +85,100 @@
 }
 
 .projects__media {
-  border-radius: 12px;
-  background: rgba(255, 255, 255, 0.03);
-  border: 1px solid rgba(255, 255, 255, 0.08);
-  height: 120px;
-  display: grid;
-  place-items: center;
-  padding: 0.8rem;
+  border-radius: 14px;
+  background: linear-gradient(135deg, rgba(194, 107, 27, 0.22), rgba(255, 255, 255, 0.05));
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  height: 168px;
+  padding: 0.45rem;
+  position: relative;
+  overflow: hidden;
+  isolation: isolate;
+  perspective: 820px;
+  --media-rotate-x: 0deg;
+  --media-rotate-y: 0deg;
+  --media-glow-x: 50%;
+  --media-glow-y: 50%;
 }
 
-.projects__media img {
-  width: 96px;
-  height: 96px;
+.projects__media::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
+  background: radial-gradient(circle at var(--media-glow-x) var(--media-glow-y), rgba(255, 255, 255, 0.26), transparent 34%);
+  opacity: 0;
+  transition: opacity 220ms ease;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.projects__media-shell {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  background: #0d0f12;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4);
+  transform: rotateX(var(--media-rotate-x)) rotateY(var(--media-rotate-y));
+  transform-style: preserve-3d;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+  position: relative;
+  z-index: 1;
+}
+
+.projects__media-toolbar {
+  height: 18px;
+  display: flex;
+  align-items: center;
+  gap: 0.32rem;
+  padding: 0 0.45rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(255, 255, 255, 0.05);
+}
+
+.projects__media-toolbar span {
+  width: 7px;
+  height: 7px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.36);
+}
+
+.projects__media-toolbar span:nth-child(1) {
+  background: #ff6057;
+}
+
+.projects__media-toolbar span:nth-child(2) {
+  background: #ffbd2f;
+}
+
+.projects__media-toolbar span:nth-child(3) {
+  background: #28c840;
+}
+
+.projects__media-image {
+  width: 84%;
+  height: calc(100% - 18px);
   object-fit: contain;
-  border-radius: inherit;
   display: block;
+  margin: 0 auto;
+  padding: 0.35rem 0.2rem 0.45rem;
+  transform: scale(1.02);
+  transition: transform 220ms ease;
+}
+
+.projects__card:hover .projects__media::before,
+.projects__card:focus-within .projects__media::before {
+  opacity: 1;
+}
+
+.projects__card:hover .projects__media-shell,
+.projects__card:focus-within .projects__media-shell {
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.48);
+}
+
+.projects__card:hover .projects__media-image,
+.projects__card:focus-within .projects__media-image {
+  transform: scale(1.04);
 }
 
 .projects__name {
@@ -172,9 +254,40 @@
   margin-top: auto;
 }
 
+@media (max-width: 1280px) {
+  .projects {
+    padding-inline: 4.5vw;
+  }
+
+  .projects__card {
+    padding: 1.35rem 1.2rem 1.5rem;
+  }
+
+  .projects__name {
+    font-size: 1.26rem;
+  }
+}
+
+@media (max-width: 1120px) {
+  .projects__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 860px) {
+  .projects__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects__media {
+    height: 182px;
+  }
+}
+
 @media (max-width: 700px) {
   .projects {
     padding: 6rem 6vw;
+    align-items: flex-start;
   }
 
   .projects__header {
@@ -183,6 +296,7 @@
 
   .projects__subtitle {
     margin-top: 0.7rem;
+    max-width: none;
   }
 }
 
@@ -197,7 +311,7 @@
   }
 
   .projects__media {
-    height: 150px;
+    height: 164px;
   }
 
   .projects__card {
@@ -210,5 +324,16 @@
 
   .projects__cta {
     width: 100%;
+  }
+}
+
+@media (hover: none), (pointer: coarse) {
+  .projects__media {
+    --media-rotate-x: 0deg;
+    --media-rotate-y: 0deg;
+  }
+
+  .projects__media-shell {
+    transform: none;
   }
 }

@@ -48,20 +48,47 @@ export const scrollToSection = (id: string, block: ScrollAlign = "start") => {
   const rect = target.getBoundingClientRect();
   const absoluteTop = rect.top + window.scrollY;
   const elementHeight = target.offsetHeight;
+  const projectTitle =
+    id === "projects"
+      ? target.querySelector<HTMLElement>(".projects__title")
+      : null;
 
   let desiredTop = absoluteTop;
 
   if (block === "start") {
-    desiredTop = absoluteTop - headerOffset - 10;
+    if (projectTitle) {
+      const titleRect = projectTitle.getBoundingClientRect();
+      const titleAbsoluteTop = titleRect.top + window.scrollY;
+      desiredTop = titleAbsoluteTop - headerOffset - 14;
+    } else {
+      desiredTop = absoluteTop - headerOffset - 10;
+    }
   }
 
   if (block === "center") {
+    const focusTarget =
+      target.querySelector<HTMLElement>(
+        ".skills__content, .certifications__content, .education__content, .contact__content"
+      ) ?? target;
+    const focusRect = focusTarget.getBoundingClientRect();
+    const focusAbsoluteTop = focusRect.top + window.scrollY;
+    const focusHeight = Math.min(
+      focusTarget.offsetHeight,
+      window.innerHeight * 0.72
+    );
     const viewportCenter = window.innerHeight / 2;
+    const centerOffsetById: Record<string, number> = {
+      certifications: 88,
+      education: 56,
+      contato: 88,
+    };
+    const centerOffset = centerOffsetById[id] ?? 0;
     desiredTop =
-      absoluteTop -
+      focusAbsoluteTop -
       viewportCenter +
-      elementHeight / 2 -
-      headerOffset / 2;
+      focusHeight / 2 -
+      headerOffset / 2 +
+      centerOffset;
   }
 
   if (block === "end") {
