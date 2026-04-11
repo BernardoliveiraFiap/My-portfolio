@@ -15,6 +15,7 @@ const en = {
     softSkills: "Soft Skills",
     projects: "Projects",
     certifications: "Certifications",
+    education: "Education",
     contact: "Contact",
   },
   sectionArrows: {
@@ -103,6 +104,39 @@ const en = {
       "Proactivity in problem solving",
       "Continuous learning and adaptability",
     ],
+  },
+  education: {
+    title: "Education",
+    subtitle:
+      "Academic foundation completed in graduation plus an ongoing specialization to deepen architecture, cloud, and continuous delivery skills.",
+    visitCourse: "View course",
+    labels: {
+      institution: "Institution:",
+      degree: "Level:",
+      duration: "Duration:",
+    },
+    graduation: {
+      kicker: "Graduation",
+      name: "Systems Analysis and Development",
+      institution: "FIAP",
+      degree: "Technology Degree",
+      duration: "2 years",
+      status: "Completed",
+      description:
+        "Higher education focused on software engineering, application architecture, databases, and full stack development.",
+      imageAlt: "FIAP graduation institutional image",
+    },
+    postgraduate: {
+      kicker: "Postgraduate",
+      name: "DevOps and Cloud Architecture",
+      institution: "FIAP + Alura (Pós Tech)",
+      degree: "Specialization",
+      duration: "10 months",
+      status: "In progress",
+      description:
+        "Specialization focused on DevOps culture, cloud infrastructure, automation, observability, and modern engineering practices.",
+      imageAlt: "FIAP Pós Tech institutional image",
+    },
   },
   certifications: {
     title: "Certifications",

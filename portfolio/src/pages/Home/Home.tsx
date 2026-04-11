@@ -2,6 +2,7 @@ import Hero from "./sections/Hero/Hero";
 import Skills from "./sections/Skills/Skills";
 import Projects from "./sections/Projects/Projects";
 import Certifications from "./sections/Certifications/Certifications";
+import Education from "./sections/Education/Education";
 import Contact from "./sections/Contact/Contact";
 import useSpawnOnScroll from "../../hooks/useSpawnOnScroll";
 import type { ThemeMode } from "../../types/theme";
@@ -23,6 +24,7 @@ const Home = ({ themeMode, onThemeModeChange }: HomeProps) => {
         <Skills />
         <Projects />
         <Certifications />
+        <Education />
         <Contact />
       </div>
     </>

@@ -223,10 +223,12 @@
 .theme-light .skills,
 .theme-light .projects,
 .theme-light .certifications,
+.theme-light .education,
 .theme-light .contact,
 .post-hero--light .skills,
 .post-hero--light .projects,
 .post-hero--light .certifications,
+.post-hero--light .education,
 .post-hero--light .contact {
   color: var(--apple-text);
 }
@@ -251,6 +253,11 @@
   background: linear-gradient(180deg, #f5faf5 0%, #edf4ed 100%);
 }
 
+.theme-light .education,
+.post-hero--light .education {
+  background: linear-gradient(180deg, #edf5ed 0%, #e8f0e8 100%);
+}
+
 .theme-light .contact,
 .post-hero--light .contact {
   background: linear-gradient(180deg, #ebf3eb 0%, #e4ece4 100%);
@@ -259,10 +266,12 @@
 .theme-light .skills__title,
 .theme-light .projects__title,
 .theme-light .certifications__title,
+.theme-light .education__title,
 .theme-light .contact__title,
 .post-hero--light .skills__title,
 .post-hero--light .projects__title,
 .post-hero--light .certifications__title,
+.post-hero--light .education__title,
 .post-hero--light .contact__title {
   color: var(--apple-accent-strong);
 }
@@ -270,10 +279,12 @@
 .theme-light .skills__subtitle,
 .theme-light .projects__subtitle,
 .theme-light .certifications__subtitle,
+.theme-light .education__subtitle,
 .theme-light .contact__subtitle,
 .post-hero--light .skills__subtitle,
 .post-hero--light .projects__subtitle,
 .post-hero--light .certifications__subtitle,
+.post-hero--light .education__subtitle,
 .post-hero--light .contact__subtitle {
   color: var(--apple-muted);
 }
@@ -281,10 +292,12 @@
 .theme-light .skills__card,
 .theme-light .projects__card,
 .theme-light .certifications__card,
+.theme-light .education__card,
 .theme-light .contact__card,
 .post-hero--light .skills__card,
 .post-hero--light .projects__card,
 .post-hero--light .certifications__card,
+.post-hero--light .education__card,
 .post-hero--light .contact__card {
   border: 1px solid var(--apple-border);
   background: rgba(255, 255, 255, 0.9);
@@ -292,14 +305,18 @@
 }
 
 .theme-light .certifications__card,
+.theme-light .education__card,
 .theme-light .contact__card,
 .post-hero--light .certifications__card,
+.post-hero--light .education__card,
 .post-hero--light .contact__card {
   color: var(--apple-text);
 }
 
 .theme-light .certifications__card h3,
-.post-hero--light .certifications__card h3 {
+.theme-light .education__name,
+.post-hero--light .certifications__card h3,
+.post-hero--light .education__name {
   color: var(--apple-text);
 }
 
@@ -307,12 +324,16 @@
 .theme-light .projects__card:focus-within,
 .theme-light .certifications__card:hover,
 .theme-light .certifications__card:focus-visible,
+.theme-light .education__card:hover,
+.theme-light .education__card:focus-within,
 .theme-light .contact__card:hover,
 .theme-light .contact__card:focus-visible,
 .post-hero--light .projects__card:hover,
 .post-hero--light .projects__card:focus-within,
 .post-hero--light .certifications__card:hover,
 .post-hero--light .certifications__card:focus-visible,
+.post-hero--light .education__card:hover,
+.post-hero--light .education__card:focus-within,
 .post-hero--light .contact__card:hover,
 .post-hero--light .contact__card:focus-visible {
   border-color: rgba(31, 106, 74, 0.55);
@@ -323,21 +344,46 @@
 .theme-light .skills__card ul,
 .theme-light .projects__description,
 .theme-light .certifications__card p,
+.theme-light .education__description,
+.theme-light .education__meta-value,
 .theme-light .contact__value,
 .post-hero--light .skills__card ul,
 .post-hero--light .projects__description,
 .post-hero--light .certifications__card p,
+.post-hero--light .education__description,
+.post-hero--light .education__meta-value,
 .post-hero--light .contact__value {
   color: rgba(29, 29, 31, 0.86);
 }
 
 .theme-light .projects__eyebrow,
 .theme-light .projects__meta,
+.theme-light .education__kicker,
+.theme-light .education__meta-label,
 .theme-light .contact__label,
 .post-hero--light .projects__eyebrow,
 .post-hero--light .projects__meta,
+.post-hero--light .education__kicker,
+.post-hero--light .education__meta-label,
 .post-hero--light .contact__label {
   color: var(--apple-muted);
+}
+
+.theme-light .education__media,
+.post-hero--light .education__media {
+  border-bottom-color: var(--apple-border);
+}
+
+.theme-light .education__status--completed,
+.post-hero--light .education__status--completed {
+  color: #0f2517;
+  background: rgba(183, 240, 206, 0.95);
+}
+
+.theme-light .education__status--progress,
+.post-hero--light .education__status--progress {
+  color: #3e2b0d;
+  background: rgba(255, 220, 162, 0.94);
 }
 
 .theme-light .projects__media,
@@ -354,8 +400,10 @@
 }
 
 .theme-light .projects__cta,
+.theme-light .education__cta,
 .theme-light .contact__card-action,
 .post-hero--light .projects__cta,
+.post-hero--light .education__cta,
 .post-hero--light .contact__card-action {
   color: #ffffff;
   background: var(--apple-accent);
@@ -364,10 +412,14 @@
 
 .theme-light .projects__cta:hover,
 .theme-light .projects__cta:focus-visible,
+.theme-light .education__cta:hover,
+.theme-light .education__cta:focus-visible,
 .theme-light .contact__card-action:hover,
 .theme-light .contact__card-action:focus-visible,
 .post-hero--light .projects__cta:hover,
 .post-hero--light .projects__cta:focus-visible,
+.post-hero--light .education__cta:hover,
+.post-hero--light .education__cta:focus-visible,
 .post-hero--light .contact__card-action:hover,
 .post-hero--light .contact__card-action:focus-visible {
   background: var(--apple-accent-strong);

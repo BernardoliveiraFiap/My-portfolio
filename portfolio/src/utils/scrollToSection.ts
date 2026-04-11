@@ -68,7 +68,7 @@ export const scrollToSection = (id: string, block: ScrollAlign = "start") => {
   if (block === "center") {
     const focusTarget =
       target.querySelector<HTMLElement>(
-        ".skills__content, .certifications__content, .contact__content"
+        ".skills__content, .certifications__content, .education__content, .contact__content"
       ) ?? target;
     const focusRect = focusTarget.getBoundingClientRect();
     const focusAbsoluteTop = focusRect.top + window.scrollY;
@@ -77,11 +77,18 @@ export const scrollToSection = (id: string, block: ScrollAlign = "start") => {
       window.innerHeight * 0.72
     );
     const viewportCenter = window.innerHeight / 2;
+    const centerOffsetById: Record<string, number> = {
+      certifications: 88,
+      education: 56,
+      contato: 88,
+    };
+    const centerOffset = centerOffsetById[id] ?? 0;
     desiredTop =
       focusAbsoluteTop -
       viewportCenter +
       focusHeight / 2 -
-      headerOffset / 2;
+      headerOffset / 2 +
+      centerOffset;
   }
 
   if (block === "end") {

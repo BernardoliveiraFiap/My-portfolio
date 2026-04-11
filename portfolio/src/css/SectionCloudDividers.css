@@ -10,6 +10,7 @@ body.theme-light {
 .skills,
 .projects,
 .certifications,
+.education,
 .contact {
   position: relative;
   isolation: isolate;
@@ -19,6 +20,7 @@ body.theme-light {
 .skills > *,
 .projects > *,
 .certifications > *,
+.education > *,
 .contact > * {
   position: relative;
   z-index: 1;
@@ -27,6 +29,7 @@ body.theme-light {
 .skills::before,
 .projects::before,
 .certifications::before,
+.education::before,
 .contact::before {
   content: "";
   position: absolute;
@@ -43,6 +46,7 @@ body.theme-light {
 .skills::before,
 .projects::before,
 .certifications::before,
+.education::before,
 .contact::before {
   top: 0;
   background-image: var(--section-cloud-shape);
@@ -53,6 +57,7 @@ body.theme-light {
   .skills::before,
   .projects::before,
   .certifications::before,
+.education::before,
   .contact::before {
     --section-cloud-height: clamp(52px, 12vw, 84px);
   }

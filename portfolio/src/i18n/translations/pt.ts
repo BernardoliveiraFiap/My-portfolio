@@ -15,6 +15,7 @@ const pt = {
     softSkills: "Soft Skills",
     projects: "Projetos",
     certifications: "Certificações",
+    education: "Formações",
     contact: "Contato",
   },
   sectionArrows: {
@@ -103,6 +104,39 @@ const pt = {
       "Proatividade para resolver problemas",
       "Aprendizado contínuo e adaptabilidade",
     ],
+  },
+  education: {
+    title: "Formações",
+    subtitle:
+      "Base acadêmica concluída na graduação e especialização em andamento para aprofundar arquitetura, cloud e entrega contínua.",
+    visitCourse: "Ver curso",
+    labels: {
+      institution: "Instituição:",
+      degree: "Nível:",
+      duration: "Duração:",
+    },
+    graduation: {
+      kicker: "Graduação",
+      name: "Análise e Desenvolvimento de Sistemas",
+      institution: "FIAP",
+      degree: "Tecnólogo",
+      duration: "2 anos",
+      status: "Concluída",
+      description:
+        "Formação superior tecnológica com foco em engenharia de software, arquitetura de aplicações, banco de dados e desenvolvimento full stack.",
+      imageAlt: "Imagem institucional da graduação FIAP",
+    },
+    postgraduate: {
+      kicker: "Pós-graduação",
+      name: "DevOps e Arquitetura Cloud",
+      institution: "FIAP + Alura (Pós Tech)",
+      degree: "Especialização",
+      duration: "10 meses",
+      status: "Em andamento",
+      description:
+        "Especialização voltada para cultura DevOps, infraestrutura em nuvem, automação, observabilidade e práticas modernas de engenharia.",
+      imageAlt: "Imagem institucional da Pós Tech FIAP",
+    },
   },
   certifications: {
     title: "Certificações",
