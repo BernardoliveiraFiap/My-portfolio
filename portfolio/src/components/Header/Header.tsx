@@ -6,7 +6,7 @@ import "../../css/Header.css";
 import { useEffect, useRef, useState } from "react";
 
 const getSectionBlock = (id: string): ScrollAlign =>
-  id === "top" || id === "contato" || id === "projects" ? "start" : "center";
+  id === "top" || id === "projects" ? "start" : "center";
 
 const Header = () => {
   const { t } = useI18n();
@@ -19,6 +19,7 @@ const Header = () => {
   useEffect(() => {
     let ticking = false;
     const minScrollToHide = 96;
+    const shouldHideOnScroll = () => window.innerWidth <= 900;
 
     const setHeaderHidden = (nextValue: boolean) => {
       if (hiddenRef.current === nextValue) return;
@@ -35,6 +36,13 @@ const Header = () => {
         const lastY = lastScrollYRef.current;
         const delta = currentY - lastY;
 
+        if (!shouldHideOnScroll()) {
+          setHeaderHidden(false);
+          lastScrollYRef.current = currentY;
+          ticking = false;
+          return;
+        }
+
         if (currentY <= minScrollToHide) {
           setHeaderHidden(false);
         } else if (delta > 0) {
@@ -49,6 +57,11 @@ const Header = () => {
     };
 
     const onWheel = (event: WheelEvent) => {
+      if (!shouldHideOnScroll()) {
+        setHeaderHidden(false);
+        return;
+      }
+
       if (window.scrollY <= minScrollToHide) {
         setHeaderHidden(false);
         return;
@@ -63,6 +76,11 @@ const Header = () => {
     };
 
     const onTouchMove = (event: TouchEvent) => {
+      if (!shouldHideOnScroll()) {
+        setHeaderHidden(false);
+        return;
+      }
+
       const previousY = touchStartYRef.current;
       const currentTouchY = event.touches[0]?.clientY;
       if (previousY === null || currentTouchY === undefined) return;
@@ -78,17 +96,25 @@ const Header = () => {
       touchStartYRef.current = currentTouchY;
     };
 
+    const onResize = () => {
+      if (!shouldHideOnScroll()) {
+        setHeaderHidden(false);
+      }
+    };
+
     lastScrollYRef.current = window.scrollY;
     window.addEventListener("scroll", onScroll, { passive: true });
     window.addEventListener("wheel", onWheel, { passive: true });
     window.addEventListener("touchstart", onTouchStart, { passive: true });
     window.addEventListener("touchmove", onTouchMove, { passive: true });
+    window.addEventListener("resize", onResize);
 
     return () => {
       window.removeEventListener("scroll", onScroll);
       window.removeEventListener("wheel", onWheel);
       window.removeEventListener("touchstart", onTouchStart);
       window.removeEventListener("touchmove", onTouchMove);
+      window.removeEventListener("resize", onResize);
     };
   }, []);
 

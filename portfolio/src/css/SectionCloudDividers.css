@@ -1,0 +1,59 @@
+:root {
+  --section-cloud-height: clamp(64px, 8vw, 102px);
+  --section-cloud-shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 180' preserveAspectRatio='none'%3E%3Cpath fill='%23ffffff' fill-opacity='.15' d='M0 58C130 92 250 92 390 69C520 48 670 44 815 58C956 72 1077 95 1218 83C1305 76 1374 67 1440 76V147C1348 128 1243 127 1146 141C1014 160 872 164 739 149C609 134 502 122 369 129C238 136 114 152 0 141Z'/%3E%3Cpath fill='%23ffffff' fill-opacity='.08' d='M0 46C119 70 226 73 344 58C470 42 616 38 758 51C900 63 1026 86 1169 78C1267 72 1351 63 1440 69V134C1322 119 1211 119 1098 132C964 147 817 151 684 139C549 127 433 116 298 124C189 131 95 145 0 135Z'/%3E%3C/svg%3E");
+}
+
+body.theme-light {
+  --section-cloud-shape: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1440 180' preserveAspectRatio='none'%3E%3Cpath fill='%231f6a4a' fill-opacity='.16' d='M0 62C147 96 283 96 426 77C553 60 705 56 858 71C1009 86 1150 106 1289 93C1345 88 1393 84 1440 88V141C1295 157 1144 169 995 163C854 157 723 135 580 128C434 120 292 132 147 142C98 145 49 148 0 145Z'/%3E%3C/svg%3E");
+}
+
+.skills,
+.projects,
+.certifications,
+.contact {
+  position: relative;
+  isolation: isolate;
+  overflow: hidden;
+}
+
+.skills > *,
+.projects > *,
+.certifications > *,
+.contact > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skills::before,
+.projects::before,
+.certifications::before,
+.contact::before {
+  content: "";
+  position: absolute;
+  left: -1px;
+  right: -1px;
+  height: var(--section-cloud-height);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.skills::before,
+.projects::before,
+.certifications::before,
+.contact::before {
+  top: 0;
+  background-image: var(--section-cloud-shape);
+  filter: drop-shadow(0 6px 10px rgba(0, 0, 0, 0.14));
+}
+
+@media (max-width: 900px) {
+  .skills::before,
+  .projects::before,
+  .certifications::before,
+  .contact::before {
+    --section-cloud-height: clamp(52px, 12vw, 84px);
+  }
+}

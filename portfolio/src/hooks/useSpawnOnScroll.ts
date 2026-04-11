@@ -1,6 +1,6 @@
 import { useEffect } from "react";
 
-const useSpawnOnScroll = () => {
+const useSpawnOnScroll = (refreshKey?: string) => {
   useEffect(() => {
     const rightSpawnTextClasses = new Set([
       "skills__title",
@@ -193,7 +193,7 @@ const useSpawnOnScroll = () => {
       window.removeEventListener("hashchange", handleHashChange);
       window.removeEventListener("section:navigate", handleSectionNavigate as EventListener);
     };
-  }, []);
+  }, [refreshKey]);
 };
 
 export default useSpawnOnScroll;

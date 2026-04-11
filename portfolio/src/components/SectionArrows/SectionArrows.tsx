@@ -4,7 +4,7 @@ import { scrollToSection, type ScrollAlign } from "../../utils/scrollToSection";
 import "../../css/SectionArrows.css";
 
 const getBlock = (id: string): ScrollAlign =>
-  id === "top" || id === "contato" || id === "projects" ? "start" : "center";
+  id === "top" || id === "projects" ? "start" : "center";
 
 type SectionArrowsProps = {
   sectionId: string;

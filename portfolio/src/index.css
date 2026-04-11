@@ -1,4 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap");
+@import "./css/LightMode.css";
+@import "./css/SectionCloudDividers.css";
 
 * {
   box-sizing: border-box;
@@ -41,6 +43,10 @@ img {
 .layout__main {
   flex: 1;
   padding-top: var(--site-header-offset, 0px);
+}
+
+.post-hero {
+  transition: background 220ms ease, color 220ms ease;
 }
 
 section,

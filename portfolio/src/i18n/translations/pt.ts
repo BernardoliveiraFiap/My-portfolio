@@ -5,6 +5,9 @@ const pt = {
     logoAlt: "Logo EB",
     navLabel: "Navegação principal",
     languageLabel: "Idioma",
+    themeLabel: "Tema",
+    themeDark: "Dark",
+    themeLight: "White",
   },
   nav: {
     top: "Início",
@@ -36,6 +39,10 @@ const pt = {
     linkedinLabel: "LinkedIn",
     hardSkillsLink: "Ir para a seção de Hard Skills",
     softSkillsLink: "Ir para a seção de Soft Skills",
+    lightKicker: "Portfólio",
+    lightTitle: "Construo, entrego e escalo produtos digitais",
+    lightText:
+      "Experiências reais em web, mobile e cloud com foco em performance, clareza e evolução contínua.",
   },
   footer: {
     title: "Obrigado pela visita",
@@ -62,7 +69,7 @@ const pt = {
     georiscoMobileDescription:
       "Aplicativo desenvolvido do zero para monitoramento e gestão de risco geológico, com frontend mobile completo, integração com APIs e serviços AWS, automação de build/release e publicação na App Store e Google Play para operação em contexto crítico (Linha 6 do Metrô de São Paulo).",
     georiscoWebDescription:
-      "Plataforma web completa evoluída da estratégia mobile-first, com reaproveitamento de código e colaboração ponta a ponta em frontend, backend, cloud e estrutura de CMS, mantendo foco em escalabilidade, segurança e evolução contínua do produto.",
+      "Plataforma web completa evoluída da estratégia mobile-first, com reaproveitamento de código e colaboração ponta a ponta em frontend, backend, cloud e estrutura de Backoffice, mantendo foco em escalabilidade, segurança e evolução contínua do produto.",
     ipoolDescription:
       "Atuação em manutenção, evolução e suporte técnico de soluções de TI sob demanda, com melhorias funcionais e técnicas voltadas para estabilidade, performance e experiência do usuário.",
     googlePlay: "Google Play",
