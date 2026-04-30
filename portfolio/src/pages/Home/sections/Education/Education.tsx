@@ -58,7 +58,7 @@ const Education = () => {
                 className="education__cta"
                 href="https://www.fiap.com.br/graduacao/tecnologo/analise-e-desenvolvimento-de-sistemas/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {t("education.visitCourse")}
               </a>
@@ -101,7 +101,7 @@ const Education = () => {
                 className="education__cta"
                 href="https://postech.fiap.com.br/curso/devops-e-arquitetura-cloud"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
               >
                 {t("education.visitCourse")}
               </a>

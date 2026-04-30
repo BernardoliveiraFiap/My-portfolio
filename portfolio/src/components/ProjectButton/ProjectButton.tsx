@@ -15,7 +15,7 @@ const ProjectButton = ({ href, label, ariaLabel, className }: ProjectButtonProps
       className={combinedClassName}
       href={href}
       target="_blank"
-      rel="noreferrer"
+      rel="noopener noreferrer"
       aria-label={ariaLabel}
     >
       {label}
