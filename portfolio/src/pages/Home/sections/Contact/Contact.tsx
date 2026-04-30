@@ -57,7 +57,7 @@ const Contact = () => {
               className="contact__card-action"
               href="https://www.linkedin.com/in/enzoliveiria/"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {t("contact.sendMessage")}
             </a>
@@ -81,7 +81,7 @@ const Contact = () => {
               className="contact__card-action"
               href="https://wa.me/5511988479283"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               {t("contact.sendMessage")}
             </a>

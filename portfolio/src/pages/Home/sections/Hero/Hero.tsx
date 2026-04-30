@@ -101,7 +101,7 @@ const Hero = ({ themeMode, onThemeModeChange }: HeroProps) => {
                 className="hero__linkedin"
                 href="https://www.linkedin.com/in/enzoliveiria/"
                 target="_blank"
-                rel="noreferrer"
+                rel="noopener noreferrer"
                 aria-label={t("hero.linkedinLabel")}
               >
                 <svg
@@ -144,7 +144,7 @@ const Hero = ({ themeMode, onThemeModeChange }: HeroProps) => {
               className="hero__button hero__button--whatsapp"
               href="https://wa.me/5511988479283"
               target="_blank"
-              rel="noreferrer"
+              rel="noopener noreferrer"
             >
               <svg
                 className="hero__button-icon"

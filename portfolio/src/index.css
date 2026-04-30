@@ -110,3 +110,15 @@ button:hover {
   transform: translate3d(0, 0, 0);
   filter: blur(0);
 }
+
+@media (max-width: 768px) {
+  .spawn-item,
+  .spawn-item[data-spawn-direction="right"],
+  .spawn-item[data-spawn-direction="up"] {
+    opacity: 1;
+    transform: none;
+    transition: none;
+    filter: none;
+    will-change: auto;
+  }
+}
